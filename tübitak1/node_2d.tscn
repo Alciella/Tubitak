@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://b4jc7qt12gtlo"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0

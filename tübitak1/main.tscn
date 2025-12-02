@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://cacqp83my2ot7"]
+[gd_scene load_steps=2 format=3 uid="uid://o0mqc7yxy525"]
 
 [ext_resource type="Texture2D" uid="uid://c3ry3wi75n4as" path="res://proje resim/aerial-birds-eye-view-city-buildings-houses-detailed-above-grouped-layered-eps-148956250.webp" id="1_ig7tw"]
 
@@ -6,9 +6,9 @@
 position = Vector2(-1, 1)
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = 1.9999995
-offset_top = 0.9999695
-offset_right = 1649.1427
-offset_bottom = 921.0
+offset_left = -40.0
+offset_top = -618.0
+offset_right = 1639.0
+offset_bottom = 1061.0
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_ig7tw")
