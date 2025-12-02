@@ -1,14 +1,81 @@
-[gd_scene load_steps=2 format=3 uid="uid://o0mqc7yxy525"]
+[gd_scene load_steps=7 format=3 uid="uid://o0mqc7yxy525"]
 
+[ext_resource type="Script" uid="uid://cgme8klbqfhbr" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://c3ry3wi75n4as" path="res://proje resim/aerial-birds-eye-view-city-buildings-houses-detailed-above-grouped-layered-eps-148956250.webp" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://g1n81ion1hrc" path="res://icon.svg" id="2_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://b6k56en5fdpwg" path="res://proje resim/kavun.png" id="4_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://cu2w185dpxjoh" path="res://proje resim/modern-grey-and-white-office-building-with-multiple-windows-illustration-urban-architecture-design-vector.jpg" id="5_7mycd"]
+[ext_resource type="Texture2D" uid="uid://bm3q28ejgppux" path="res://proje resim/danger-or-hazard-yellow-symbol-danger-alert-vector.jpg" id="6_272bh"]
 
-[node name="Node2D" type="Node2D"]
-position = Vector2(-1, 1)
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_h2yge")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -40.0
-offset_top = -618.0
-offset_right = 1639.0
-offset_bottom = 1061.0
+[node name="arkaplan" type="Node2D" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="arkaplan"]
+offset_left = -4.0
+offset_top = -53.0
+offset_right = 1675.0
+offset_bottom = 1626.0
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_ig7tw")
+
+[node name="Node2D" type="Node2D" parent="arkaplan/TextureRect"]
+
+[node name="yazı" type="Label" parent="."]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 24.0
+offset_right = 799.0
+offset_bottom = 161.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "Selamlar"
+
+[node name="kavun" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -1304.0
+offset_top = -260.0
+offset_right = -324.0
+offset_bottom = 720.0
+scale = Vector2(0.42, 0.42)
+pivot_offset = Vector2(490, 490)
+texture = ExtResource("4_1bvp3")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 591.0
+offset_top = 966.0
+offset_right = 719.0
+offset_bottom = 1094.0
+scale = Vector2(0.57, 1)
+texture_normal = ExtResource("2_1bvp3")
+
+[node name="bina1" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 794.0
+offset_right = 551.0
+offset_bottom = 1144.0
+scale = Vector2(0.505, 0.505)
+texture_normal = ExtResource("5_7mycd")
+
+[node name="TextureRect" type="TextureRect" parent="bina1"]
+layout_mode = 0
+offset_left = 467.327
+offset_top = 102.97
+offset_right = 1763.33
+offset_bottom = 1434.97
+scale = Vector2(0.165, 0.165)
+texture = ExtResource("6_272bh")
+
+[node name="Modern-grey-and-white-office-building-with-multiple-windows-illustration-urban-architecture-design-vector" type="Sprite2D" parent="."]
+position = Vector2(1.00002, 43)
+scale = Vector2(0.405702, 0.468571)
+texture = ExtResource("5_7mycd")
+
+[connection signal="button_down" from="TextureButton" to="." method="_on_texture_button_button_down"]
+[connection signal="button_up" from="TextureButton" to="." method="_on_texture_button_button_up"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
