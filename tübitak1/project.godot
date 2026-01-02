@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="tübitak1"
-config/features=PackedStringArray("4.4", "GL Compatibility")
-config/icon="res://icon.svg"
+run/main_scene="uid://rydo7tjdv272"
+config/features=PackedStringArray("4.5", "GL Compatibility")
 
 [rendering]
 

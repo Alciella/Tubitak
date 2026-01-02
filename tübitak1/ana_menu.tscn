@@ -1,0 +1,225 @@
+[gd_scene load_steps=15 format=3 uid="uid://rydo7tjdv272"]
+
+[ext_resource type="Texture2D" uid="uid://cw5ddguqju6eq" path="res://UI/PNG/Blue/Default/button_rectangle_depth_gloss.png" id="1_2rxeu"]
+[ext_resource type="Texture2D" uid="uid://dljm4st0nh6jc" path="res://UI/PNG/Blue/Default/button_rectangle_depth_gradient.png" id="2_7lff7"]
+[ext_resource type="Texture2D" uid="uid://cf8t1i54kxv7e" path="res://UI/PNG/Blue/Default/button_rectangle_depth_flat.png" id="3_3c8eh"]
+[ext_resource type="FontFile" uid="uid://b28eqe7euiy5k" path="res://Chewy-Regular.ttf" id="4_u3cs0"]
+[ext_resource type="Script" uid="uid://tincmj1xjdqj" path="res://ana_menu.gd" id="5_7cuqp"]
+[ext_resource type="Texture2D" uid="uid://bis3mtki0h0gx" path="res://UI/background.jpg" id="6_6xv6y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ahtel"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_buyit"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2qd0g"]
+texture = ExtResource("1_2rxeu")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_acegb"]
+texture = ExtResource("2_7lff7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g7ja1"]
+texture = ExtResource("3_3c8eh")
+
+[sub_resource type="Theme" id="Theme_1nl3g"]
+default_font = ExtResource("4_u3cs0")
+default_font_size = 30
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/styles/disabled = SubResource("StyleBoxFlat_ahtel")
+Button/styles/focus = SubResource("StyleBoxFlat_buyit")
+Button/styles/hover = SubResource("StyleBoxTexture_2qd0g")
+Button/styles/normal = SubResource("StyleBoxTexture_acegb")
+Button/styles/pressed = SubResource("StyleBoxTexture_g7ja1")
+
+[sub_resource type="LabelSettings" id="LabelSettings_runbn"]
+font = ExtResource("4_u3cs0")
+font_size = 121
+font_color = Color(0.10980392, 0.62352943, 0.84313726, 1)
+outline_size = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b1wvl"]
+bg_color = Color(0.11341462, 0.62898815, 0.8500148, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[node name="AnaMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_1nl3g")
+script = ExtResource("5_7cuqp")
+
+[node name="ArkaPlan" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_6xv6y")
+expand_mode = 2
+stretch_mode = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.0
+offset_top = -231.0
+offset_right = 220.0
+offset_bottom = 231.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 44
+
+[node name="OyunIsmi" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.38500562, 0.6399329, 0, 1)
+text = "DOGAL AFET"
+label_settings = SubResource("LabelSettings_runbn")
+
+[node name="OynaButonu" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(188.525, 82.19)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "OYNA"
+
+[node name="Ayarlar" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(188.525, 82.19)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "AYARLAR
+"
+
+[node name="Cikis" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(188.525, 82.19)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "CIKIS"
+
+[node name="AyarlarPaneli" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -392.0
+offset_top = -267.0
+offset_right = 400.164
+offset_bottom = 293.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_b1wvl")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AyarlarPaneli"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 39
+
+[node name="AyarYazi" type="Label" parent="AyarlarPaneli/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 70
+text = "AYARLAR"
+horizontal_alignment = 1
+
+[node name="MuzikSesi" type="Label" parent="AyarlarPaneli/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 45
+text = "Müzik Sesi"
+
+[node name="Muzik" type="HSlider" parent="AyarlarPaneli/VBoxContainer"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="SesEfekSesi" type="Label" parent="AyarlarPaneli/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 45
+text = "Efekt Sesi"
+
+[node name="SesEfekti" type="HSlider" parent="AyarlarPaneli/VBoxContainer"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Geri" type="Button" parent="AyarlarPaneli/VBoxContainer"]
+custom_minimum_size = Vector2(109.855, 57.86)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "GERI"
+
+[connection signal="pressed" from="VBoxContainer/OynaButonu" to="." method="_on_oyna_butonu_pressed"]
+[connection signal="pressed" from="VBoxContainer/Ayarlar" to="." method="_on_ayarlar_pressed"]
+[connection signal="pressed" from="VBoxContainer/Cikis" to="." method="_on_cikis_pressed"]
+[connection signal="pressed" from="AyarlarPaneli/VBoxContainer/Geri" to="." method="_on_geri_pressed"]
