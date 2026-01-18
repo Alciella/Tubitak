@@ -9,7 +9,7 @@ func _ready():
 
 # oyna butonu
 func _on_oyna_butonu_pressed():
-	print("oyna butonu çalışıyor")
+	get_tree().change_scene_to_file("res://bolumler_menu.tscn")
 
 # ayarlar butonu
 func _on_ayarlar_pressed():
