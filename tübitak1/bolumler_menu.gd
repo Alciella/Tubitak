@@ -16,4 +16,5 @@ func _on_geri_pressed() -> void:
 
 
 func _on_deprem_pressed() -> void:
+	get_tree().change_scene_to_file("res://bölüm_1_deprem.tscn")
 	print("deprem bölümü çalışıyor")
