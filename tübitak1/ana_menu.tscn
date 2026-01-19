@@ -140,12 +140,17 @@ label_settings = SubResource("LabelSettings_runbn")
 custom_minimum_size = Vector2(188.525, 82.19)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 text = "OYNA"
 
 [node name="Ayarlar" type="Button" parent="VBoxContainer"]
 custom_minimum_size = Vector2(188.525, 82.19)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "AYARLAR
 "
 
@@ -153,6 +158,7 @@ text = "AYARLAR
 custom_minimum_size = Vector2(188.525, 82.19)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "CIKIS"
 
 [node name="AyarlarPaneli" type="Panel" parent="."]

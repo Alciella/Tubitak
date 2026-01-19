@@ -1,0 +1,126 @@
+[gd_scene load_steps=9 format=3 uid="uid://d1m25l6e2r8e3"]
+
+[ext_resource type="Texture2D" uid="uid://djyr57b0mtpww" path="res://UI/sınıf.png" id="1_1s5y2"]
+[ext_resource type="Texture2D" uid="uid://c8gd6p7cxm4bj" path="res://UI/cocuk1.png" id="2_seyn2"]
+[ext_resource type="Texture2D" uid="uid://c40fmtue8lk7d" path="res://UI/cocuk2.png" id="3_mgrom"]
+[ext_resource type="Texture2D" uid="uid://cnduakif04033" path="res://UI/cocuk3.png" id="4_yil7o"]
+[ext_resource type="Script" uid="uid://cqn25js6hhvsb" path="res://camera_2d.gd" id="5_mgrom"]
+
+[sub_resource type="Animation" id="Animation_mgrom"]
+resource_name = "deprem_baslat"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("arkaplan/cocuk1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("arkaplan/cocuk2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("depremKamera")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [15.0],
+"method": &"sallanmaya_basla"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_yil7o"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("arkaplan/cocuk1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("arkaplan/cocuk2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7umeq"]
+_data = {
+&"RESET": SubResource("Animation_yil7o"),
+&"deprem_baslat": SubResource("Animation_mgrom")
+}
+
+[node name="bolum_2_deprem" type="Node2D"]
+
+[node name="depremRoot" type="Node2D" parent="."]
+
+[node name="arkaplan" type="TextureRect" parent="depremRoot"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -6.0
+offset_top = -9.0
+offset_right = 1155.2705
+offset_bottom = 650.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_1s5y2")
+expand_mode = 1
+
+[node name="cocuk1" type="Sprite2D" parent="depremRoot/arkaplan"]
+position = Vector2(806, 337)
+scale = Vector2(0.22753906, 0.22753906)
+texture = ExtResource("2_seyn2")
+
+[node name="cocuk2" type="Sprite2D" parent="depremRoot/arkaplan"]
+visible = false
+position = Vector2(805, 344.9999)
+scale = Vector2(0.251953, 0.251953)
+texture = ExtResource("3_mgrom")
+
+[node name="cocuk3" type="Sprite2D" parent="depremRoot/arkaplan"]
+visible = false
+position = Vector2(579, 428)
+scale = Vector2(0.25292966, 0.27344507)
+texture = ExtResource("4_yil7o")
+
+[node name="depremAnimasyon" type="AnimationPlayer" parent="depremRoot"]
+libraries = {
+&"": SubResource("AnimationLibrary_7umeq")
+}
+
+[node name="depremKamera" type="Camera2D" parent="depremRoot"]
+position = Vector2(583, 323)
+script = ExtResource("5_mgrom")
