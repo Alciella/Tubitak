@@ -1,0 +1,499 @@
+[gd_scene load_steps=30 format=3 uid="uid://cvbjkkxgi2up6"]
+
+[ext_resource type="Script" uid="uid://dgjlkypvlq1wm" path="res://bölüm_1_deprem.gd" id="1_0eha0"]
+[ext_resource type="Texture2D" uid="uid://d3h2xrt7dyxjf" path="res://resimler/oda.png" id="2_gk8sq"]
+[ext_resource type="Texture2D" uid="uid://ceq50ntev0ebn" path="res://resimler/flashlight-colored-flat-icon-against-transparent-background-free-png.png" id="3_ba3m0"]
+[ext_resource type="Script" uid="uid://bun2yx4wtapa8" path="res://flashlight.gd" id="4_1d5ri"]
+[ext_resource type="Texture2D" uid="uid://bp8dxi5romo21" path="res://resimler/top.png" id="5_ba3m0"]
+[ext_resource type="Script" uid="uid://bjqus0ps56yeq" path="res://top_interactive.gd" id="6_1d5ri"]
+[ext_resource type="Texture2D" uid="uid://c4u31fkoigl6a" path="res://resimler/çanta.png" id="7_di6ed"]
+[ext_resource type="Texture2D" uid="uid://k7iqorw7elkb" path="res://resimler/X.png" id="7_giimd"]
+[ext_resource type="Texture2D" uid="uid://dnihoddjjx163" path="res://resimler/düdük.png" id="7_v7ujr"]
+[ext_resource type="Script" uid="uid://dc50v7dshdbch" path="res://yanlış.gd" id="8_8y2sp"]
+[ext_resource type="Texture2D" uid="uid://b6e0tqpkowwdv" path="res://resimler/su.png" id="8_maec7"]
+[ext_resource type="Texture2D" uid="uid://cktvnytcks55g" path="res://resimler/yemek.png" id="9_6yyem"]
+[ext_resource type="Texture2D" uid="uid://c25bc21y8dxu8" path="res://resimler/note2.png" id="9_hdvic"]
+[ext_resource type="Texture2D" uid="uid://0durrffse07d" path="res://resimler/eldiven.png" id="10_ltrkv"]
+[ext_resource type="Texture2D" uid="uid://car8v1wjqnhyb" path="res://resimler/çizgi 1.png" id="10_maec7"]
+[ext_resource type="Script" uid="uid://ddalw5eslnmgl" path="res://yemek_buton.gd" id="10_qlyw3"]
+[ext_resource type="Script" uid="uid://br1ry8o4iqae" path="res://eldiven_button.gd" id="12_b7ayq"]
+[ext_resource type="Texture2D" uid="uid://dgnpiyed8c7e4" path="res://resimler/telsiz.png" id="13_6ka6t"]
+[ext_resource type="Texture2D" uid="uid://cp084ivjpduh1" path="res://resimler/çizgi 2.png" id="13_hdvic"]
+[ext_resource type="Texture2D" uid="uid://ckyigk62e04l2" path="res://resimler/oyunkonsol.png" id="14_uflvg"]
+[ext_resource type="Texture2D" uid="uid://dvrp3eouxynvf" path="res://resimler/ayıcık.png" id="15_reww0"]
+[ext_resource type="Texture2D" uid="uid://bj1xdrcc8n6sl" path="res://resimler/çizgi 3.png" id="15_wvpg3"]
+[ext_resource type="Texture2D" uid="uid://cnmhypc4tfsk7" path="res://resimler/cips.png" id="16_3skl8"]
+[ext_resource type="Texture2D" uid="uid://bgvwsoy8fed7l" path="res://resimler/kaktüs.png" id="17_8om4y"]
+[ext_resource type="Texture2D" uid="uid://c5bl2nodw75tw" path="res://resimler/çizgi 5.png" id="18_qlyw3"]
+[ext_resource type="Texture2D" uid="uid://budwt8fowmf14" path="res://resimler/çizgi 4.png" id="19_b7ayq"]
+[ext_resource type="Texture2D" uid="uid://celhbc0e24lu6" path="res://resimler/çizgi 6.png" id="23_me82t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wvpg3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uflvg"]
+
+[node name="bölüm1_deprem" type="Node2D"]
+script = ExtResource("1_0eha0")
+
+[node name="Oda" type="Sprite2D" parent="."]
+position = Vector2(588, 326.99997)
+scale = Vector2(0.7617188, 0.67187494)
+texture = ExtResource("2_gk8sq")
+
+[node name="butonlar" type="Node2D" parent="Oda"]
+
+[node name="flashlight_button" type="TextureButton" parent="Oda/butonlar"]
+offset_left = -1060.759
+offset_top = -791.81415
+offset_right = -36.759033
+offset_bottom = 232.18585
+scale = Vector2(0.1, 0.1)
+pivot_offset = Vector2(512, 512)
+texture_normal = ExtResource("3_ba3m0")
+stretch_mode = 0
+script = ExtResource("4_1d5ri")
+
+[node name="top_interactive" type="TextureButton" parent="Oda/butonlar"]
+offset_left = -420.1026
+offset_top = -427.16287
+offset_right = 603.8974
+offset_bottom = 596.83716
+scale = Vector2(0.1, 0.1)
+pivot_offset = Vector2(512, 512)
+texture_normal = ExtResource("5_ba3m0")
+script = ExtResource("6_1d5ri")
+
+[node name="düdük_button" type="TextureButton" parent="Oda/butonlar"]
+offset_left = 36.759003
+offset_top = -474.79077
+offset_right = 1060.759
+offset_bottom = 549.2092
+scale = Vector2(0.1, 0.1)
+pivot_offset = Vector2(512, 512)
+texture_normal = ExtResource("7_v7ujr")
+stretch_mode = 0
+script = ExtResource("4_1d5ri")
+
+[node name="su_button" type="TextureButton" parent="Oda/butonlar"]
+offset_left = 97.14874
+offset_top = -320.00006
+offset_right = 1121.1487
+offset_bottom = 703.99994
+scale = Vector2(0.1, 0.1)
+pivot_offset = Vector2(512, 512)
+texture_normal = ExtResource("8_maec7")
+stretch_mode = 0
+script = ExtResource("4_1d5ri")
+
+[node name="Su" type="Sprite2D" parent="Oda/butonlar/su_button"]
+position = Vector2(288.8208, 541.7683)
+scale = Vector2(0.99999994, 1.0000001)
+texture = ExtResource("8_maec7")
+
+[node name="Su2" type="Sprite2D" parent="Oda/butonlar/su_button"]
+position = Vector2(722.05084, 571.5358)
+scale = Vector2(0.99999994, 1.0000001)
+texture = ExtResource("8_maec7")
+
+[node name="yemek_buton" type="TextureButton" parent="Oda/butonlar"]
+offset_left = -1164.4717
+offset_top = -312.55817
+offset_right = -236.74579
+offset_bottom = 711.44183
+scale = Vector2(0.125, 0.125)
+pivot_offset = Vector2(512, 512)
+texture_normal = ExtResource("9_6yyem")
+script = ExtResource("10_qlyw3")
+
+[node name="Su" type="Sprite2D" parent="Oda/butonlar/yemek_buton"]
+position = Vector2(469.9897, 392.9309)
+texture = ExtResource("9_6yyem")
+
+[node name="eldiven_button" type="TextureButton" parent="Oda/butonlar"]
+offset_left = -967.5487
+offset_top = -602.7908
+offset_right = 56.451294
+offset_bottom = 421.20923
+scale = Vector2(0.1, 0.1)
+pivot_offset = Vector2(512, 512)
+texture_normal = ExtResource("10_ltrkv")
+stretch_mode = 0
+script = ExtResource("12_b7ayq")
+
+[node name="telsiz_button" type="TextureButton" parent="Oda/butonlar"]
+offset_left = -803.44617
+offset_top = -592.3722
+offset_right = 220.55383
+offset_bottom = 431.6278
+scale = Vector2(0.1, 0.1)
+pivot_offset = Vector2(512, 512)
+texture_normal = ExtResource("13_6ka6t")
+stretch_mode = 0
+script = ExtResource("4_1d5ri")
+
+[node name="oyun_konsol_button" type="TextureButton" parent="Oda/butonlar"]
+offset_left = -974.1128
+offset_top = -797.7675
+offset_right = 49.887207
+offset_bottom = 226.23248
+scale = Vector2(0.1, 0.1)
+pivot_offset = Vector2(512, 512)
+texture_normal = ExtResource("14_uflvg")
+stretch_mode = 0
+script = ExtResource("4_1d5ri")
+
+[node name="ayıcık_button" type="TextureButton" parent="Oda/butonlar"]
+offset_left = -127.34369
+offset_top = -522.4187
+offset_right = 896.6563
+offset_bottom = 501.5813
+scale = Vector2(0.1, 0.1)
+pivot_offset = Vector2(512, 512)
+texture_normal = ExtResource("15_reww0")
+stretch_mode = 0
+script = ExtResource("4_1d5ri")
+
+[node name="cips_button" type="TextureButton" parent="Oda/butonlar"]
+offset_left = -644.59485
+offset_top = -278.32562
+offset_right = 379.40515
+offset_bottom = 745.6744
+rotation = 0.8339338
+scale = Vector2(0.115, 0.115)
+pivot_offset = Vector2(512, 512)
+texture_normal = ExtResource("16_3skl8")
+stretch_mode = 0
+script = ExtResource("4_1d5ri")
+
+[node name="flashlight_button4" type="TextureButton" parent="Oda/butonlar"]
+offset_left = -1042.3794
+offset_top = -495.62793
+offset_right = -18.379395
+offset_bottom = 528.3721
+rotation = -0.05649428
+scale = Vector2(0.1, 0.1)
+pivot_offset = Vector2(512, 512)
+texture_normal = ExtResource("17_8om4y")
+stretch_mode = 0
+script = ExtResource("4_1d5ri")
+
+[node name="resimler" type="Node2D" parent="Oda"]
+
+[node name="Çanta" type="Sprite2D" parent="Oda/resimler"]
+position = Vector2(-400.41028, 294.6977)
+scale = Vector2(0.4, 0.45399997)
+texture = ExtResource("7_di6ed")
+
+[node name="Note" type="Sprite2D" parent="Oda/resimler"]
+position = Vector2(279.6308, 293.20935)
+scale = Vector2(0.493, 0.559)
+texture = ExtResource("9_hdvic")
+
+[node name="flashlight" type="TextureRect" parent="Oda/resimler"]
+offset_left = -539.5692
+offset_top = 264.9303
+offset_right = 440.4308
+offset_bottom = 1244.9304
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_ba3m0")
+
+[node name="flashlight2" type="TextureRect" parent="Oda/resimler"]
+offset_left = 177.23071
+offset_top = 95.25584
+offset_right = 1157.2308
+offset_bottom = 1075.256
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("3_ba3m0")
+
+[node name="TextEdit" type="TextEdit" parent="Oda/resimler/flashlight2"]
+layout_mode = 0
+offset_left = 1050.2563
+offset_top = 186.04652
+offset_right = 2674.3638
+offset_bottom = 780.62854
+scale = Vector2(1.035, 1.035)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 371
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wvpg3")
+text = "el feneri
+"
+
+[node name="Çizgi1" type="Sprite2D" parent="Oda/resimler/flashlight2"]
+visible = false
+position = Vector2(1493.334, 446.51172)
+scale = Vector2(9, 9)
+texture = ExtResource("10_maec7")
+
+[node name="yanlış" type="TextureRect" parent="Oda/resimler"]
+visible = false
+offset_left = -605.2102
+offset_top = -589.39545
+offset_right = 594.7898
+offset_bottom = 610.60455
+scale = Vector2(0.5, 0.5)
+pivot_offset = Vector2(512, 512)
+texture = ExtResource("7_giimd")
+script = ExtResource("8_8y2sp")
+
+[node name="düdük" type="TextureRect" parent="Oda/resimler"]
+offset_left = -329.5179
+offset_top = 346.79074
+offset_right = 410.4821
+offset_bottom = 1086.7908
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("7_v7ujr")
+
+[node name="düdük2" type="TextureRect" parent="Oda/resimler"]
+offset_left = 174.60449
+offset_top = 148.83716
+offset_right = 914.6045
+offset_bottom = 888.83716
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("7_v7ujr")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextEdit" type="TextEdit" parent="Oda/resimler/düdük2"]
+layout_mode = 0
+offset_left = 813.9551
+offset_top = 74.41952
+offset_right = 2438.0625
+offset_bottom = 669.0015
+scale = Vector2(0.895, 0.895)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 371
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wvpg3")
+text = "düdük
+
+"
+
+[node name="Çizgi2" type="Sprite2D" parent="Oda/resimler/düdük2"]
+visible = false
+position = Vector2(1083.0768, 372.0931)
+scale = Vector2(7.2808695, 9)
+texture = ExtResource("13_hdvic")
+
+[node name="su" type="TextureRect" parent="Oda/resimler"]
+offset_left = -799.50757
+offset_top = -189.02321
+offset_right = 180.49243
+offset_bottom = 790.97687
+rotation = 1.5676634
+scale = Vector2(0.1, 0.1)
+pivot_offset = Vector2(490, 490)
+texture = ExtResource("8_maec7")
+metadata/_edit_use_anchors_ = true
+
+[node name="Su" type="Sprite2D" parent="Oda/resimler/su"]
+position = Vector2(709.989, 493.8695)
+scale = Vector2(0.99999994, 1.0000001)
+texture = ExtResource("8_maec7")
+
+[node name="Su2" type="Sprite2D" parent="Oda/resimler/su"]
+position = Vector2(918.3601, 494.5223)
+scale = Vector2(0.99999994, 1.0000001)
+texture = ExtResource("8_maec7")
+
+[node name="su2" type="TextureRect" parent="Oda/resimler"]
+offset_left = -278.31934
+offset_top = -251.53467
+offset_right = 701.68066
+offset_bottom = 728.46533
+scale = Vector2(0.08, 0.08)
+pivot_offset = Vector2(490, 490)
+texture = ExtResource("8_maec7")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextEdit" type="TextEdit" parent="Oda/resimler/su2"]
+layout_mode = 0
+offset_left = 1076.8145
+offset_top = 262.67236
+offset_right = 3056.1963
+offset_bottom = 818.89404
+scale = Vector2(0.975, 0.975)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 371
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wvpg3")
+text = "SU
+
+
+
+"
+
+[node name="Çizgi3" type="Sprite2D" parent="Oda/resimler/su2"]
+visible = false
+position = Vector2(1404.9998, 523.1399)
+scale = Vector2(8, 8)
+texture = ExtResource("15_wvpg3")
+
+[node name="yemek" type="TextureRect" parent="Oda/resimler"]
+offset_left = -821.8256
+offset_top = 66.976746
+offset_right = -209.82562
+offset_bottom = 678.97675
+scale = Vector2(0.1, 0.1)
+pivot_offset = Vector2(306, 306)
+texture = ExtResource("9_6yyem")
+
+[node name="Yemek" type="Sprite2D" parent="Oda/resimler/yemek"]
+position = Vector2(659.334, 312.04688)
+texture = ExtResource("9_6yyem")
+
+[node name="yemek2" type="TextureRect" parent="Oda/resimler"]
+offset_left = 161.4769
+offset_top = 253.02327
+offset_right = 773.4769
+offset_bottom = 865.02325
+scale = Vector2(0.1, 0.1)
+pivot_offset = Vector2(20, 20)
+texture = ExtResource("9_6yyem")
+
+[node name="TextEdit" type="TextEdit" parent="Oda/resimler/yemek2"]
+layout_mode = 0
+offset_left = 804.5596
+offset_top = 43.25537
+offset_right = 2783.9404
+offset_bottom = 599.47705
+scale = Vector2(0.8, 0.8)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 371
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wvpg3")
+text = "yemek
+
+
+
+
+"
+
+[node name="Çizgi5" type="Sprite2D" parent="Oda/resimler/yemek2"]
+visible = false
+position = Vector2(1132.8207, 236.74438)
+scale = Vector2(6.843, 7.758)
+texture = ExtResource("18_qlyw3")
+
+[node name="eldiven" type="TextureRect" parent="Oda/resimler"]
+offset_left = 166.72818
+offset_top = 320.00003
+offset_right = 526.72815
+offset_bottom = 680.00006
+scale = Vector2(0.15, 0.15)
+pivot_offset = Vector2(20, 20)
+texture = ExtResource("10_ltrkv")
+
+[node name="TextEdit" type="TextEdit" parent="Oda/resimler/eldiven"]
+layout_mode = 0
+offset_left = 516.82025
+offset_top = 65.27112
+offset_right = 2496.2012
+offset_bottom = 621.4928
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 371
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wvpg3")
+text = "eldiven
+
+
+
+
+"
+
+[node name="Çizgi4" type="Sprite2D" parent="Oda/resimler/eldiven"]
+visible = false
+position = Vector2(635.71765, 191.51147)
+scale = Vector2(5.077744, 6.3331585)
+texture = ExtResource("19_b7ayq")
+
+[node name="eldiven2" type="TextureRect" parent="Oda/resimler"]
+offset_left = -484.43076
+offset_top = 272.37213
+offset_right = -124.430756
+offset_bottom = 632.3722
+scale = Vector2(0.25, 0.25)
+pivot_offset = Vector2(20, 20)
+texture = ExtResource("10_ltrkv")
+
+[node name="telsiz" type="TextureRect" parent="Oda/resimler"]
+offset_left = -426.6667
+offset_top = 297.67447
+offset_right = 597.3333
+offset_bottom = 1321.6744
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("13_6ka6t")
+
+[node name="telsiz2" type="TextureRect" parent="Oda/resimler"]
+offset_left = 171.97945
+offset_top = 378.04657
+offset_right = 1195.9795
+offset_bottom = 1402.0466
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("13_6ka6t")
+
+[node name="TextEdit" type="TextEdit" parent="Oda/resimler/telsiz2"]
+layout_mode = 0
+offset_left = 1115.8977
+offset_top = 353.4888
+offset_right = 3095.2786
+offset_bottom = 909.71045
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 371
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wvpg3")
+text = "Telsiz
+
+
+
+
+
+"
+
+[node name="Çizgi6" type="Sprite2D" parent="Oda/resimler/telsiz2"]
+visible = false
+position = Vector2(1411.2817, 613.954)
+scale = Vector2(10, 10)
+texture = ExtResource("23_me82t")
+
+[node name="bitiş" type="Node2D" parent="Oda"]
+visible = false
+
+[node name="TextureRect" type="ColorRect" parent="Oda/bitiş"]
+offset_left = -380.71796
+offset_top = -416.74417
+offset_right = 296.69745
+offset_bottom = -59.53485
+
+[node name="TextEdit" type="TextEdit" parent="Oda/bitiş/TextureRect"]
+layout_mode = 0
+offset_right = 673.4769
+offset_bottom = 215.81396
+theme_override_colors/font_color = Color(0.31257433, 0.9999998, 0.86905634, 1)
+theme_override_font_sizes/font_size = 150
+theme_override_styles/normal = SubResource("StyleBoxEmpty_uflvg")
+text = "kazandın"
+
+[node name="geri" type="Button" parent="Oda/bitiş/TextureRect"]
+layout_mode = 0
+offset_left = 39.38465
+offset_top = 264.93027
+offset_right = 112.902626
+offset_bottom = 333.3954
+text = "geri"
+
+[node name="sonraki" type="Button" parent="Oda/bitiş/TextureRect"]
+layout_mode = 0
+offset_left = 536.94354
+offset_top = 263.4419
+offset_right = 656.94354
+offset_bottom = 331.907
+text = "sonraki bölüm
+"
+
+[connection signal="pressed" from="Oda/butonlar/flashlight_button" to="." method="_on_flashlight_pressed"]
+[connection signal="pressed" from="Oda/butonlar/top_interactive" to="." method="_on_top_interactive_pressed"]
+[connection signal="pressed" from="Oda/butonlar/düdük_button" to="." method="_on_düdük_button_pressed"]
+[connection signal="pressed" from="Oda/butonlar/su_button" to="." method="_on_su_button_pressed"]
+[connection signal="pressed" from="Oda/butonlar/yemek_buton" to="." method="_on_yemek_buton_pressed"]
+[connection signal="pressed" from="Oda/butonlar/eldiven_button" to="." method="_on_eldiven_button_pressed"]
+[connection signal="pressed" from="Oda/butonlar/telsiz_button" to="." method="_on_telsiz_button_pressed"]
+[connection signal="pressed" from="Oda/butonlar/oyun_konsol_button" to="." method="_on_oyun_konsol_button_pressed"]
+[connection signal="pressed" from="Oda/butonlar/ayıcık_button" to="." method="_on_ayıcık_button_pressed"]
+[connection signal="pressed" from="Oda/butonlar/cips_button" to="." method="_on_cips_button_pressed"]
+[connection signal="pressed" from="Oda/butonlar/flashlight_button4" to="." method="_on_flashlight_button_4_pressed"]
+[connection signal="pressed" from="Oda/bitiş/TextureRect/geri" to="." method="_on_geri_pressed"]
