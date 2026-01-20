@@ -1,11 +1,11 @@
-[gd_scene load_steps=34 format=3 uid="uid://cvbjkkxgi2up6"]
+[gd_scene load_steps=37 format=3 uid="uid://cvbjkkxgi2up6"]
 
 [ext_resource type="Script" uid="uid://dgjlkypvlq1wm" path="res://bölüm_1_deprem.gd" id="1_0eha0"]
 [ext_resource type="Texture2D" uid="uid://d3h2xrt7dyxjf" path="res://resimler/oda.png" id="2_gk8sq"]
 [ext_resource type="Texture2D" uid="uid://ceq50ntev0ebn" path="res://resimler/flashlight-colored-flat-icon-against-transparent-background-free-png.png" id="3_ba3m0"]
-[ext_resource type="Script" uid="uid://bun2yx4wtapa8" path="res://flashlight.gd" id="4_1d5ri"]
+[ext_resource type="Script" path="res://flashlight.gd" id="4_1d5ri"]
 [ext_resource type="Texture2D" uid="uid://bp8dxi5romo21" path="res://resimler/top.png" id="5_ba3m0"]
-[ext_resource type="Script" uid="uid://bjqus0ps56yeq" path="res://top_interactive.gd" id="6_1d5ri"]
+[ext_resource type="Script" path="res://top_interactive.gd" id="6_1d5ri"]
 [ext_resource type="Texture2D" uid="uid://c4u31fkoigl6a" path="res://resimler/çanta.png" id="7_di6ed"]
 [ext_resource type="Texture2D" uid="uid://k7iqorw7elkb" path="res://resimler/X.png" id="7_giimd"]
 [ext_resource type="Texture2D" uid="uid://dnihoddjjx163" path="res://resimler/düdük.png" id="7_v7ujr"]
@@ -15,8 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://c25bc21y8dxu8" path="res://resimler/note2.png" id="9_hdvic"]
 [ext_resource type="Texture2D" uid="uid://0durrffse07d" path="res://resimler/eldiven.png" id="10_ltrkv"]
 [ext_resource type="Texture2D" uid="uid://car8v1wjqnhyb" path="res://resimler/çizgi 1.png" id="10_maec7"]
-[ext_resource type="Script" uid="uid://ddalw5eslnmgl" path="res://yemek_buton.gd" id="10_qlyw3"]
-[ext_resource type="Script" uid="uid://br1ry8o4iqae" path="res://eldiven_button.gd" id="12_b7ayq"]
+[ext_resource type="Script" path="res://yemek_buton.gd" id="10_qlyw3"]
+[ext_resource type="Script" path="res://eldiven_button.gd" id="12_b7ayq"]
 [ext_resource type="Texture2D" uid="uid://dgnpiyed8c7e4" path="res://resimler/telsiz.png" id="13_6ka6t"]
 [ext_resource type="Texture2D" uid="uid://cp084ivjpduh1" path="res://resimler/çizgi 2.png" id="13_hdvic"]
 [ext_resource type="Texture2D" uid="uid://ckyigk62e04l2" path="res://resimler/oyunkonsol.png" id="14_uflvg"]
@@ -27,12 +27,26 @@
 [ext_resource type="Texture2D" uid="uid://c5bl2nodw75tw" path="res://resimler/çizgi 5.png" id="18_qlyw3"]
 [ext_resource type="Texture2D" uid="uid://budwt8fowmf14" path="res://resimler/çizgi 4.png" id="19_b7ayq"]
 [ext_resource type="Texture2D" uid="uid://celhbc0e24lu6" path="res://resimler/çizgi 6.png" id="23_me82t"]
+[ext_resource type="FontFile" uid="uid://b28eqe7euiy5k" path="res://Chewy-Regular.ttf" id="28_1wvpn"]
 [ext_resource type="AudioStream" uid="uid://d0e3xmgia7lrb" path="res://ses/kalemsfx.mp3" id="28_3skl8"]
 [ext_resource type="AudioStream" uid="uid://b0aoi6bpr8pk3" path="res://ses/wrongsfx.mp3" id="29_3skl8"]
+[ext_resource type="Theme" uid="uid://iukq480f3mjy" path="res://new_theme.tres" id="29_6dmo1"]
 [ext_resource type="AudioStream" uid="uid://b8f42a7bylgd2" path="res://ses/12. Cartoon.mp3" id="30_8om4y"]
 [ext_resource type="AudioStream" uid="uid://c0fm11stda878" path="res://ses/winsfx.mp3" id="31_qmp01"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wvpg3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6dmo1"]
+bg_color = Color(0.10980392, 0.62352943, 0.84313726, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uflvg"]
 
@@ -457,37 +471,57 @@ texture = ExtResource("23_me82t")
 [node name="bitiş" type="Node2D" parent="Oda"]
 visible = false
 
-[node name="TextureRect" type="ColorRect" parent="Oda/bitiş"]
+[node name="TextureRect" type="Panel" parent="Oda/bitiş"]
 offset_left = -380.71796
 offset_top = -416.74417
 offset_right = 296.69745
 offset_bottom = -59.53485
+theme_override_styles/panel = SubResource("StyleBoxFlat_6dmo1")
 
-[node name="TextEdit" type="TextEdit" parent="Oda/bitiş/TextureRect"]
-layout_mode = 0
-offset_right = 673.4769
-offset_bottom = 215.81396
-theme_override_colors/font_color = Color(0.31257433, 0.9999998, 0.86905634, 1)
-theme_override_font_sizes/font_size = 150
+[node name="TextEdit" type="Label" parent="Oda/bitiş/TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -183.79485
+offset_top = -129.48837
+offset_right = 215.30243
+offset_bottom = 149.51161
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("28_1wvpn")
+theme_override_font_sizes/font_size = 70
 theme_override_styles/normal = SubResource("StyleBoxEmpty_uflvg")
-text = "kazandın"
+text = "TEBRIKLER
+KAZANDINIZ"
 
 [node name="geri" type="Button" parent="Oda/bitiş/TextureRect"]
 layout_mode = 0
-offset_left = 39.38465
-offset_top = 264.93027
-offset_right = 112.902626
-offset_bottom = 333.3954
-text = "geri"
+offset_left = 40.69747
+offset_top = 253.02327
+offset_right = 114.21545
+offset_bottom = 321.4884
+rotation = 6.0382565e-05
+theme = ExtResource("29_6dmo1")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("28_1wvpn")
+theme_override_font_sizes/font_size = 31
+text = "GERI"
 
 [node name="sonraki" type="Button" parent="Oda/bitiş/TextureRect"]
 layout_mode = 0
-offset_left = 536.94354
-offset_top = 263.4419
-offset_right = 656.94354
-offset_bottom = 331.907
-text = "sonraki bölüm
-"
+offset_left = 531.69226
+offset_top = 254.51166
+offset_right = 651.69226
+offset_bottom = 322.97678
+theme = ExtResource("29_6dmo1")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "SONRAKI
+BÖLÜM"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("28_3skl8")

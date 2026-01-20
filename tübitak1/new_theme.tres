@@ -1,0 +1,21 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://iukq480f3mjy"]
+
+[ext_resource type="Texture2D" uid="uid://druk7s5sxi1fp" path="res://UI/Vector/Blue/button_rectangle_depth_gloss.svg" id="1_78ylj"]
+[ext_resource type="FontFile" uid="uid://b28eqe7euiy5k" path="res://Chewy-Regular.ttf" id="1_aggjg"]
+[ext_resource type="Texture2D" uid="uid://cvrgi17hj5rsp" path="res://UI/Vector/Blue/button_rectangle_depth_gradient.svg" id="2_aggjg"]
+[ext_resource type="Texture2D" uid="uid://bgn8aotc5nuu" path="res://UI/Vector/Blue/button_rectangle_depth_flat.svg" id="3_i66g5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nft0o"]
+texture = ExtResource("1_78ylj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nkfox"]
+texture = ExtResource("2_aggjg")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0xefo"]
+texture = ExtResource("3_i66g5")
+
+[resource]
+Button/fonts/font = ExtResource("1_aggjg")
+Button/styles/hover = SubResource("StyleBoxTexture_nft0o")
+Button/styles/normal = SubResource("StyleBoxTexture_nkfox")
+Button/styles/pressed = SubResource("StyleBoxTexture_0xefo")

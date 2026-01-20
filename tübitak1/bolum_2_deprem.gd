@@ -27,7 +27,7 @@ func _process(delta: float) -> void:
 		$"menü".visible=false
 		$"bitiş".visible=true
 		$depremRoot/arkaplan/cocuk3.visible=false
-		$cocuk1.visible=true
+		$cocuk1.visible=false
 		$depremRoot/arkaplan.kill()
 		bitti=true
 		$bitti.play()

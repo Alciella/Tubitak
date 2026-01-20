@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://d1m25l6e2r8e3"]
+[gd_scene load_steps=21 format=3 uid="uid://d1m25l6e2r8e3"]
 
 [ext_resource type="Texture2D" uid="uid://djyr57b0mtpww" path="res://UI/sınıf.png" id="1_1s5y2"]
 [ext_resource type="Script" uid="uid://cval48dfu0qe" path="res://bolum_2_deprem.gd" id="1_df4ra"]
@@ -12,9 +12,25 @@
 [ext_resource type="Texture2D" uid="uid://k7iqorw7elkb" path="res://resimler/X.png" id="9_qe3pl"]
 [ext_resource type="Texture2D" uid="uid://cyjjiewx3t027" path="res://resimler/KAPAN.png" id="10_6a054"]
 [ext_resource type="Script" uid="uid://c4ql4hkksp7ws" path="res://x.gd" id="10_xe8qn"]
+[ext_resource type="FontFile" uid="uid://b28eqe7euiy5k" path="res://Chewy-Regular.ttf" id="12_8nu6h"]
 [ext_resource type="AudioStream" uid="uid://b0aoi6bpr8pk3" path="res://ses/wrongsfx.mp3" id="13_6a054"]
+[ext_resource type="Theme" uid="uid://iukq480f3mjy" path="res://new_theme.tres" id="13_pfyyv"]
 [ext_resource type="AudioStream" uid="uid://o1lhpsu4n07j" path="res://ses/correctsfx.mp3" id="14_550ym"]
 [ext_resource type="AudioStream" uid="uid://c0fm11stda878" path="res://ses/winsfx.mp3" id="15_550ym"]
+
+[sub_resource type="Theme" id="Theme_pfyyv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ecy2i"]
+bg_color = Color(0.10980392, 0.62352943, 0.84313726, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j54t8"]
 
@@ -184,37 +200,50 @@ script = ExtResource("10_xe8qn")
 [node name="bitiş" type="Node2D" parent="."]
 visible = false
 
-[node name="TextureRect" type="ColorRect" parent="bitiş"]
+[node name="TextureRect" type="Panel" parent="bitiş"]
 offset_left = 234.0
 offset_top = 7.0
 offset_right = 911.4154
 offset_bottom = 364.20932
+theme = SubResource("Theme_pfyyv")
+theme_override_styles/panel = SubResource("StyleBoxFlat_ecy2i")
 
-[node name="TextEdit" type="TextEdit" parent="bitiş/TextureRect"]
+[node name="TextEdit" type="Label" parent="bitiş/TextureRect"]
 layout_mode = 0
-offset_right = 673.4769
-offset_bottom = 215.81396
-theme_override_colors/font_color = Color(0.31257433, 0.9999998, 0.86905634, 1)
-theme_override_font_sizes/font_size = 150
+offset_left = 151.0
+offset_top = 36.0
+offset_right = 568.0
+offset_bottom = 229.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("12_8nu6h")
+theme_override_font_sizes/font_size = 70
 theme_override_styles/normal = SubResource("StyleBoxEmpty_j54t8")
-text = "kazandın"
+text = "TEBRIKLER
+KAZANDINIZ"
 
 [node name="geri" type="Button" parent="bitiş/TextureRect"]
 layout_mode = 0
-offset_left = 39.38465
-offset_top = 264.93027
-offset_right = 112.902626
-offset_bottom = 333.3954
-text = "geri"
+offset_left = 54.000008
+offset_top = 252.0
+offset_right = 127.51798
+offset_bottom = 320.46512
+theme = ExtResource("13_pfyyv")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "GERI
+"
 
 [node name="sonraki" type="Button" parent="bitiş/TextureRect"]
 layout_mode = 0
-offset_left = 536.94354
-offset_top = 263.4419
-offset_right = 656.94354
-offset_bottom = 331.907
-text = "sonraki bölüm
-"
+offset_left = 528.0
+offset_top = 250.0
+offset_right = 648.0
+offset_bottom = 318.46512
+theme = ExtResource("13_pfyyv")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 23
+text = "SONRAKI
+BÖLÜM"
 
 [node name="cocuk1" type="Sprite2D" parent="."]
 visible = false
