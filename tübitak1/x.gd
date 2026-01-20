@@ -2,7 +2,7 @@ extends TextureRect
 
 var tween: Tween
 func açılıp_kaybol():
-	$"../../../wrong".play()
+	$"../wrong".play()
 	if tween:
 		tween.kill()
 	visible=true

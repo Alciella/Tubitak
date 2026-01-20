@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://cvbjkkxgi2up6"]
+[gd_scene load_steps=34 format=3 uid="uid://cvbjkkxgi2up6"]
 
 [ext_resource type="Script" uid="uid://dgjlkypvlq1wm" path="res://bölüm_1_deprem.gd" id="1_0eha0"]
 [ext_resource type="Texture2D" uid="uid://d3h2xrt7dyxjf" path="res://resimler/oda.png" id="2_gk8sq"]
@@ -27,6 +27,10 @@
 [ext_resource type="Texture2D" uid="uid://c5bl2nodw75tw" path="res://resimler/çizgi 5.png" id="18_qlyw3"]
 [ext_resource type="Texture2D" uid="uid://budwt8fowmf14" path="res://resimler/çizgi 4.png" id="19_b7ayq"]
 [ext_resource type="Texture2D" uid="uid://celhbc0e24lu6" path="res://resimler/çizgi 6.png" id="23_me82t"]
+[ext_resource type="AudioStream" uid="uid://d0e3xmgia7lrb" path="res://ses/kalemsfx.mp3" id="28_3skl8"]
+[ext_resource type="AudioStream" uid="uid://b0aoi6bpr8pk3" path="res://ses/wrongsfx.mp3" id="29_3skl8"]
+[ext_resource type="AudioStream" uid="uid://b8f42a7bylgd2" path="res://ses/12. Cartoon.mp3" id="30_8om4y"]
+[ext_resource type="AudioStream" uid="uid://c0fm11stda878" path="res://ses/winsfx.mp3" id="31_qmp01"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wvpg3"]
 
@@ -485,6 +489,20 @@ offset_bottom = 331.907
 text = "sonraki bölüm
 "
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("28_3skl8")
+
+[node name="wrong" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("29_3skl8")
+
+[node name="background" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("30_8om4y")
+volume_db = -14.0
+autoplay = true
+
+[node name="bitişSes" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("31_qmp01")
+
 [connection signal="pressed" from="Oda/butonlar/flashlight_button" to="." method="_on_flashlight_pressed"]
 [connection signal="pressed" from="Oda/butonlar/top_interactive" to="." method="_on_top_interactive_pressed"]
 [connection signal="pressed" from="Oda/butonlar/düdük_button" to="." method="_on_düdük_button_pressed"]
@@ -497,3 +515,4 @@ text = "sonraki bölüm
 [connection signal="pressed" from="Oda/butonlar/cips_button" to="." method="_on_cips_button_pressed"]
 [connection signal="pressed" from="Oda/butonlar/flashlight_button4" to="." method="_on_flashlight_button_4_pressed"]
 [connection signal="pressed" from="Oda/bitiş/TextureRect/geri" to="." method="_on_geri_pressed"]
+[connection signal="pressed" from="Oda/bitiş/TextureRect/sonraki" to="." method="_on_sonraki_pressed"]

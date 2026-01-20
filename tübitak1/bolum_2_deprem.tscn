@@ -1,88 +1,25 @@
-[gd_scene load_steps=9 format=3 uid="uid://d1m25l6e2r8e3"]
+[gd_scene load_steps=17 format=3 uid="uid://d1m25l6e2r8e3"]
 
 [ext_resource type="Texture2D" uid="uid://djyr57b0mtpww" path="res://UI/sınıf.png" id="1_1s5y2"]
+[ext_resource type="Script" uid="uid://cval48dfu0qe" path="res://bolum_2_deprem.gd" id="1_df4ra"]
 [ext_resource type="Texture2D" uid="uid://c8gd6p7cxm4bj" path="res://UI/cocuk1.png" id="2_seyn2"]
+[ext_resource type="Script" uid="uid://2jmtl588mtra" path="res://arkaplan.gd" id="2_yil7o"]
 [ext_resource type="Texture2D" uid="uid://c40fmtue8lk7d" path="res://UI/cocuk2.png" id="3_mgrom"]
 [ext_resource type="Texture2D" uid="uid://cnduakif04033" path="res://UI/cocuk3.png" id="4_yil7o"]
-[ext_resource type="Script" uid="uid://cqn25js6hhvsb" path="res://camera_2d.gd" id="5_mgrom"]
+[ext_resource type="Texture2D" uid="uid://3447ufbirvph" path="res://resimler/resim-Photoroom.png" id="8_emqie"]
+[ext_resource type="Texture2D" uid="uid://n70400jl43q1" path="res://resimler/ÇÖK.png" id="8_j54t8"]
+[ext_resource type="Texture2D" uid="uid://dedoghlwxt3sj" path="res://resimler/TUTUN.png" id="9_ja42p"]
+[ext_resource type="Texture2D" uid="uid://k7iqorw7elkb" path="res://resimler/X.png" id="9_qe3pl"]
+[ext_resource type="Texture2D" uid="uid://cyjjiewx3t027" path="res://resimler/KAPAN.png" id="10_6a054"]
+[ext_resource type="Script" uid="uid://c4ql4hkksp7ws" path="res://x.gd" id="10_xe8qn"]
+[ext_resource type="AudioStream" uid="uid://b0aoi6bpr8pk3" path="res://ses/wrongsfx.mp3" id="13_6a054"]
+[ext_resource type="AudioStream" uid="uid://o1lhpsu4n07j" path="res://ses/correctsfx.mp3" id="14_550ym"]
+[ext_resource type="AudioStream" uid="uid://c0fm11stda878" path="res://ses/winsfx.mp3" id="15_550ym"]
 
-[sub_resource type="Animation" id="Animation_mgrom"]
-resource_name = "deprem_baslat"
-length = 3.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("arkaplan/cocuk1:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("arkaplan/cocuk2:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-tracks/2/type = "method"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("depremKamera")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(1),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [15.0],
-"method": &"sallanmaya_basla"
-}]
-}
-
-[sub_resource type="Animation" id="Animation_yil7o"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("arkaplan/cocuk1:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("arkaplan/cocuk2:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_7umeq"]
-_data = {
-&"RESET": SubResource("Animation_yil7o"),
-&"deprem_baslat": SubResource("Animation_mgrom")
-}
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j54t8"]
 
 [node name="bolum_2_deprem" type="Node2D"]
+script = ExtResource("1_df4ra")
 
 [node name="depremRoot" type="Node2D" parent="."]
 
@@ -98,15 +35,10 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_1s5y2")
 expand_mode = 1
-
-[node name="cocuk1" type="Sprite2D" parent="depremRoot/arkaplan"]
-position = Vector2(806, 337)
-scale = Vector2(0.22753906, 0.22753906)
-texture = ExtResource("2_seyn2")
+script = ExtResource("2_yil7o")
 
 [node name="cocuk2" type="Sprite2D" parent="depremRoot/arkaplan"]
-visible = false
-position = Vector2(805, 344.9999)
+position = Vector2(760, 345)
 scale = Vector2(0.251953, 0.251953)
 texture = ExtResource("3_mgrom")
 
@@ -116,11 +48,194 @@ position = Vector2(579, 428)
 scale = Vector2(0.25292966, 0.27344507)
 texture = ExtResource("4_yil7o")
 
-[node name="depremAnimasyon" type="AnimationPlayer" parent="depremRoot"]
-libraries = {
-&"": SubResource("AnimationLibrary_7umeq")
-}
+[node name="kitaplık" type="TextureButton" parent="depremRoot/arkaplan"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 139.0
+offset_right = 248.0
+offset_bottom = 410.0
 
-[node name="depremKamera" type="Camera2D" parent="depremRoot"]
-position = Vector2(583, 323)
-script = ExtResource("5_mgrom")
+[node name="sıra" type="TextureButton" parent="depremRoot/arkaplan"]
+layout_mode = 0
+offset_left = 457.0
+offset_top = 338.0
+offset_right = 710.0
+offset_bottom = 530.0
+
+[node name="cam kenarı" type="TextureButton" parent="depremRoot/arkaplan"]
+layout_mode = 0
+offset_left = 1021.0
+offset_top = 202.0
+offset_right = 1159.0
+offset_bottom = 473.0
+
+[node name="ok" type="Sprite2D" parent="."]
+position = Vector2(303.99997, 324)
+rotation = -3.101331
+scale = Vector2(0.064, 0.066)
+texture = ExtResource("8_emqie")
+
+[node name="ok2" type="Sprite2D" parent="."]
+position = Vector2(1004, 348)
+rotation = 0.026857907
+scale = Vector2(0.064, 0.066)
+texture = ExtResource("8_emqie")
+
+[node name="ok3" type="Sprite2D" parent="."]
+position = Vector2(545, 251)
+rotation = 1.6002043
+scale = Vector2(0.064, 0.066)
+texture = ExtResource("8_emqie")
+
+[node name="menü" type="ColorRect" parent="."]
+visible = false
+offset_left = 313.0
+offset_top = 93.0
+offset_right = 821.0
+offset_bottom = 308.0
+color = Color(0, 1, 1, 1)
+
+[node name="ColorRect" type="ColorRect" parent="menü"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 9.0
+offset_right = 129.0
+offset_bottom = 85.0
+color = Color(0.4390491, 0.43904912, 0.43904912, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="menü"]
+layout_mode = 0
+offset_left = 386.0
+offset_top = 9.0
+offset_right = 463.0
+offset_bottom = 85.0
+color = Color(0.4390491, 0.43904912, 0.43904912, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="menü"]
+layout_mode = 0
+offset_left = 222.0
+offset_top = 8.0
+offset_right = 299.0
+offset_bottom = 84.0
+color = Color(0.4390491, 0.43904912, 0.43904912, 1)
+
+[node name="TextEdit" type="TextEdit" parent="menü"]
+layout_mode = 0
+offset_top = -76.0
+offset_right = 512.0
+offset_bottom = 8.0
+text = "deprem anında yapılması gerekenleri doğru sıra ile yerleştiriniz"
+
+[node name="ÇÖK" type="TextureButton" parent="menü"]
+layout_mode = 0
+offset_left = 204.99998
+offset_top = 86.99999
+offset_right = 456.0
+offset_bottom = 367.0
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("8_j54t8")
+
+[node name="TUTUN" type="TextureButton" parent="menü"]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 89.99999
+offset_right = 298.0
+offset_bottom = 374.0
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("9_ja42p")
+
+[node name="KAPAN" type="TextureButton" parent="menü"]
+layout_mode = 0
+offset_left = 366.0
+offset_top = 89.0
+offset_right = 637.0
+offset_bottom = 372.0
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("10_6a054")
+
+[node name="Kapan" type="Sprite2D" parent="menü"]
+visible = false
+position = Vector2(260, 45)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("10_6a054")
+
+[node name="Tutun" type="Sprite2D" parent="menü"]
+visible = false
+position = Vector2(424, 47)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("9_ja42p")
+
+[node name="Çök" type="Sprite2D" parent="menü"]
+visible = false
+position = Vector2(90, 44)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("8_j54t8")
+
+[node name="X" type="TextureRect" parent="."]
+visible = false
+offset_left = 381.0
+offset_top = 191.0
+offset_right = 1581.0
+offset_bottom = 1391.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("9_qe3pl")
+script = ExtResource("10_xe8qn")
+
+[node name="bitiş" type="Node2D" parent="."]
+visible = false
+
+[node name="TextureRect" type="ColorRect" parent="bitiş"]
+offset_left = 234.0
+offset_top = 7.0
+offset_right = 911.4154
+offset_bottom = 364.20932
+
+[node name="TextEdit" type="TextEdit" parent="bitiş/TextureRect"]
+layout_mode = 0
+offset_right = 673.4769
+offset_bottom = 215.81396
+theme_override_colors/font_color = Color(0.31257433, 0.9999998, 0.86905634, 1)
+theme_override_font_sizes/font_size = 150
+theme_override_styles/normal = SubResource("StyleBoxEmpty_j54t8")
+text = "kazandın"
+
+[node name="geri" type="Button" parent="bitiş/TextureRect"]
+layout_mode = 0
+offset_left = 39.38465
+offset_top = 264.93027
+offset_right = 112.902626
+offset_bottom = 333.3954
+text = "geri"
+
+[node name="sonraki" type="Button" parent="bitiş/TextureRect"]
+layout_mode = 0
+offset_left = 536.94354
+offset_top = 263.4419
+offset_right = 656.94354
+offset_bottom = 331.907
+text = "sonraki bölüm
+"
+
+[node name="cocuk1" type="Sprite2D" parent="."]
+visible = false
+visibility_layer = 2
+position = Vector2(747, 336)
+scale = Vector2(0.22753906, 0.22753906)
+texture = ExtResource("2_seyn2")
+
+[node name="wrong" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_6a054")
+
+[node name="doğru" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_550ym")
+
+[node name="bitti" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_550ym")
+
+[connection signal="pressed" from="depremRoot/arkaplan/kitaplık" to="." method="_on_kitaplık_pressed"]
+[connection signal="pressed" from="depremRoot/arkaplan/sıra" to="." method="_on_sıra_pressed"]
+[connection signal="pressed" from="depremRoot/arkaplan/cam kenarı" to="." method="_on_cam_kenarı_pressed"]
+[connection signal="pressed" from="menü/ÇÖK" to="." method="_on_çök_pressed"]
+[connection signal="pressed" from="menü/TUTUN" to="." method="_on_tutun_pressed"]
+[connection signal="pressed" from="menü/KAPAN" to="." method="_on_kapan_pressed"]
+[connection signal="pressed" from="bitiş/TextureRect/geri" to="." method="_on_geri_pressed"]
