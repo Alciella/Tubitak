@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://brhnm0hgspwmj"]
+[gd_scene format=3 uid="uid://brhnm0hgspwmj"]
 
 [ext_resource type="Script" uid="uid://bs13u74wq4kva" path="res://yangın_2.gd" id="1_e547x"]
 [ext_resource type="Texture2D" uid="uid://bycpmrd5ofqxv" path="res://resimler/dztx_qmc7_201221_ss4mp_generated.jpg" id="1_o8ax3"]
@@ -7,6 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://chfmahd663end" path="res://resimler/kagit.png" id="4_uv8lb"]
 [ext_resource type="Texture2D" uid="uid://3447ufbirvph" path="res://resimler/resim-Photoroom.png" id="5_hia44"]
 [ext_resource type="Texture2D" uid="uid://c6cfif13xsb2b" path="res://resimler/water_anim.png" id="7_2lbw0"]
+[ext_resource type="Texture2D" uid="uid://bpwldkai20ikv" path="res://resimler/yıldız.png" id="8_7l6ei"]
+[ext_resource type="Texture2D" uid="uid://bfvyvo3pucg4h" path="res://resimler/kutlama.png" id="9_8ycl4"]
+[ext_resource type="Texture2D" uid="uid://cgjy6row0vor" path="res://resimler/madalya.webp" id="10_4b2w7"]
+[ext_resource type="Theme" uid="uid://iukq480f3mjy" path="res://button.tres" id="11_rirrl"]
+[ext_resource type="FontFile" uid="uid://b28eqe7euiy5k" path="res://Chewy-Regular.ttf" id="12_0vs1u"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aqp2j"]
 atlas = ExtResource("3_2lbw0")
@@ -112,15 +117,27 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lkl4b"]
+bg_color = Color(0.10980392, 0.62352943, 0.84313726, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[node name="Node2D" type="Node2D" unique_id=1101054683]
 script = ExtResource("1_e547x")
 
-[node name="DztxQmc7201221Ss4MpGenerated" type="Sprite2D" parent="."]
+[node name="DztxQmc7201221Ss4MpGenerated" type="Sprite2D" parent="." unique_id=1687237335]
 position = Vector2(581, 321)
 scale = Vector2(0.59749997, 0.59)
 texture = ExtResource("1_o8ax3")
 
-[node name="TextureRect" type="TextureRect" parent="DztxQmc7201221Ss4MpGenerated"]
+[node name="TextureRect" type="TextureRect" parent="DztxQmc7201221Ss4MpGenerated" unique_id=1096496022]
 offset_left = -155.64859
 offset_top = -32.203403
 offset_right = 224.35141
@@ -128,7 +145,7 @@ offset_bottom = 478.7966
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("2_e547x")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=752726431]
 position = Vector2(625, 113)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_8ycl4")
@@ -136,13 +153,13 @@ autoplay = "default"
 frame = 2
 frame_progress = 0.30174047
 
-[node name="Area2D" type="Area2D" parent="AnimatedSprite2D"]
+[node name="Area2D" type="Area2D" parent="AnimatedSprite2D" unique_id=1395507552]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D" unique_id=1552795335]
 position = Vector2(-26, 18.5)
 shape = SubResource("RectangleShape2D_2lbw0")
 
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=309059980]
 position = Vector2(897, 60)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_8ycl4")
@@ -150,13 +167,13 @@ autoplay = "default"
 frame = 2
 frame_progress = 0.30174047
 
-[node name="Area2D" type="Area2D" parent="AnimatedSprite2D2"]
+[node name="Area2D" type="Area2D" parent="AnimatedSprite2D2" unique_id=632598765]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D2/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D2/Area2D" unique_id=177764031]
 position = Vector2(-26, 18.5)
 shape = SubResource("RectangleShape2D_2lbw0")
 
-[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="." unique_id=1121319040]
 position = Vector2(355, 133)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_8ycl4")
@@ -164,13 +181,13 @@ autoplay = "default"
 frame = 2
 frame_progress = 0.30174047
 
-[node name="Area2D" type="Area2D" parent="AnimatedSprite2D3"]
+[node name="Area2D" type="Area2D" parent="AnimatedSprite2D3" unique_id=560792686]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D3/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D3/Area2D" unique_id=698916784]
 position = Vector2(-26, 18.5)
 shape = SubResource("RectangleShape2D_2lbw0")
 
-[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="." unique_id=127750920]
 position = Vector2(97, 52)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_8ycl4")
@@ -178,13 +195,13 @@ autoplay = "default"
 frame = 2
 frame_progress = 0.30174047
 
-[node name="Area2D" type="Area2D" parent="AnimatedSprite2D4"]
+[node name="Area2D" type="Area2D" parent="AnimatedSprite2D4" unique_id=1015924955]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D4/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D4/Area2D" unique_id=1971262531]
 position = Vector2(-26, 18.5)
 shape = SubResource("RectangleShape2D_2lbw0")
 
-[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="." unique_id=1589932862]
 position = Vector2(1099, 155)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_8ycl4")
@@ -192,34 +209,34 @@ autoplay = "default"
 frame = 2
 frame_progress = 0.30174047
 
-[node name="Area2D" type="Area2D" parent="AnimatedSprite2D5"]
+[node name="Area2D" type="Area2D" parent="AnimatedSprite2D5" unique_id=815294691]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D5/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D5/Area2D" unique_id=160673312]
 position = Vector2(-26, 18.5)
 shape = SubResource("RectangleShape2D_2lbw0")
 
-[node name="Kagit" type="Sprite2D" parent="."]
+[node name="Kagit" type="Sprite2D" parent="." unique_id=1846690989]
 position = Vector2(924.99994, 495.99997)
 scale = Vector2(0.525, 0.525)
 texture = ExtResource("4_uv8lb")
 
-[node name="ResimPhotoroom" type="Sprite2D" parent="Kagit"]
+[node name="ResimPhotoroom" type="Sprite2D" parent="Kagit" unique_id=1887576059]
 position = Vector2(-5.7142334, 17.142944)
 rotation = 1.5987216
 scale = Vector2(0.10715441, 0.13313924)
 texture = ExtResource("5_hia44")
 
-[node name="Sprite2D" type="Sprite2D" parent="Kagit"]
+[node name="Sprite2D" type="Sprite2D" parent="Kagit" unique_id=1044649046]
 position = Vector2(-5.7141705, 131.42865)
 scale = Vector2(0.62, 0.62)
 texture = SubResource("AtlasTexture_4b2w7")
 
-[node name="Sprite2D2" type="Sprite2D" parent="Kagit"]
+[node name="Sprite2D2" type="Sprite2D" parent="Kagit" unique_id=698919344]
 position = Vector2(-5.7141705, -131.42851)
 scale = Vector2(0.62, 0.62)
 texture = SubResource("AtlasTexture_2lbw0")
 
-[node name="su" type="AnimatedSprite2D" parent="."]
+[node name="su" type="AnimatedSprite2D" parent="." unique_id=727044408]
 visible = false
 position = Vector2(611, 141)
 scale = Vector2(0.212, 0.21)
@@ -227,7 +244,7 @@ sprite_frames = SubResource("SpriteFrames_ugyi1")
 frame_progress = 0.6358604
 offset = Vector2(-5.7, 0)
 
-[node name="su2" type="AnimatedSprite2D" parent="."]
+[node name="su2" type="AnimatedSprite2D" parent="." unique_id=1223510172]
 visible = false
 position = Vector2(881.00006, 87.000015)
 scale = Vector2(0.212, 0.21)
@@ -235,7 +252,7 @@ sprite_frames = SubResource("SpriteFrames_ugyi1")
 frame_progress = 0.6358604
 offset = Vector2(-5.7, 0)
 
-[node name="su3" type="AnimatedSprite2D" parent="."]
+[node name="su3" type="AnimatedSprite2D" parent="." unique_id=1311863017]
 visible = false
 position = Vector2(333.00006, 155.00002)
 scale = Vector2(0.212, 0.21)
@@ -243,7 +260,7 @@ sprite_frames = SubResource("SpriteFrames_ugyi1")
 frame_progress = 0.6358604
 offset = Vector2(-5.7, 0)
 
-[node name="su4" type="AnimatedSprite2D" parent="."]
+[node name="su4" type="AnimatedSprite2D" parent="." unique_id=241628684]
 visible = false
 position = Vector2(86.00003, 80.00003)
 scale = Vector2(0.212, 0.21)
@@ -251,7 +268,7 @@ sprite_frames = SubResource("SpriteFrames_ugyi1")
 frame_progress = 0.6358604
 offset = Vector2(-5.7, 0)
 
-[node name="su5" type="AnimatedSprite2D" parent="."]
+[node name="su5" type="AnimatedSprite2D" parent="." unique_id=813687258]
 visible = false
 position = Vector2(1087, 175.00003)
 scale = Vector2(0.212, 0.21)
@@ -259,9 +276,76 @@ sprite_frames = SubResource("SpriteFrames_ugyi1")
 frame_progress = 0.6358604
 offset = Vector2(-5.7, 0)
 
+[node name="bitiş" type="Panel" parent="." unique_id=1724191545]
+visible = false
+offset_left = 188.0
+offset_top = 44.0
+offset_right = 950.06494
+offset_bottom = 459.57513
+scale = Vector2(1.0431398, 1.0431398)
+theme_override_styles/panel = SubResource("StyleBoxFlat_lkl4b")
+
+[node name="Yıldız" type="Sprite2D" parent="bitiş" unique_id=1705652989]
+position = Vector2(132, 187)
+rotation = -0.37292263
+scale = Vector2(0.048996165, 0.048996143)
+texture = ExtResource("8_7l6ei")
+
+[node name="Kutlama" type="Sprite2D" parent="bitiş" unique_id=446164284]
+position = Vector2(636.243, 84.24487)
+rotation = 0.2284932
+scale = Vector2(0.30943996, 0.30943996)
+texture = ExtResource("9_8ycl4")
+
+[node name="Madalya" type="Sprite2D" parent="bitiş" unique_id=1862421585]
+position = Vector2(90, 69.000046)
+scale = Vector2(0.26791808, 0.2679181)
+texture = ExtResource("10_4b2w7")
+
+[node name="geri" type="Button" parent="bitiş" unique_id=1121362167]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 321.0
+offset_right = 176.4
+offset_bottom = 381.0
+theme = ExtResource("11_rirrl")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+text = "GERI"
+
+[node name="sonraki" type="Button" parent="bitiş" unique_id=1718373162]
+layout_mode = 0
+offset_left = 603.0
+offset_top = 318.0
+offset_right = 731.4
+offset_bottom = 378.0
+theme = ExtResource("11_rirrl")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+text = "SONRAKI"
+
+[node name="yazı" type="Label" parent="bitiş" unique_id=1235908381]
+layout_mode = 0
+offset_left = 197.0
+offset_top = 39.0
+offset_right = 601.0
+offset_bottom = 252.0
+theme_override_fonts/font = ExtResource("12_0vs1u")
+theme_override_font_sizes/font_size = 81
+text = "TEBRIKLER
+KAZANDINIZ"
+
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="animation_finished" from="su" to="." method="_on_su_animation_finished"]
 [connection signal="animation_finished" from="su2" to="." method="_on_su_2_animation_finished"]
 [connection signal="animation_finished" from="su3" to="." method="_on_su_3_animation_finished"]
 [connection signal="animation_finished" from="su4" to="." method="_on_su_4_animation_finished"]
 [connection signal="animation_finished" from="su5" to="." method="_on_su_5_animation_finished"]
+[connection signal="pressed" from="bitiş/geri" to="." method="_on_geri_pressed"]
+[connection signal="pressed" from="bitiş/sonraki" to="." method="_on_sonraki_pressed"]

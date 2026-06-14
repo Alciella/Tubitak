@@ -3,7 +3,7 @@ var bitis=0
 var bolum=0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$TextureRect.visible = false
+
 	pass # Replace with function body.
 
 
@@ -138,4 +138,9 @@ func _on_texture_button_13_pressed() -> void:
 
 func _on_geri_pressed() -> void:
 	get_tree().change_scene_to_file("res://bolumler_menu.tscn")
+	pass # Replace with function body.
+
+
+func _on_sonraki_pressed() -> void:
+	get_tree().change_scene_to_file("res://yangın2.tscn")
 	pass # Replace with function body.

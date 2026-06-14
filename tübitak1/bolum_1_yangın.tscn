@@ -59,6 +59,7 @@ position = Vector2(216, 584)
 texture = ExtResource("5_fxkqw")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=531428823]
+visible = false
 offset_left = 479.0
 offset_top = 332.0
 offset_right = 859.0
@@ -370,3 +371,4 @@ KAZANDINIZ"
 [connection signal="pressed" from="butonlar/TextureButton12" to="." method="_on_texture_button_12_pressed"]
 [connection signal="pressed" from="butonlar/TextureButton13" to="." method="_on_texture_button_13_pressed"]
 [connection signal="pressed" from="bitiş/geri" to="." method="_on_geri_pressed"]
+[connection signal="pressed" from="bitiş/sonraki" to="." method="_on_sonraki_pressed"]

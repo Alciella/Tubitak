@@ -251,4 +251,5 @@ text = "GERI"
 
 [connection signal="pressed" from="Panel/BolumlerGrid/Deprem" to="." method="_on_deprem_pressed"]
 [connection signal="pressed" from="Panel/BolumlerGrid/btn_yangın" to="." method="_on_btn_yangın_pressed"]
+[connection signal="pressed" from="Panel/BolumlerGrid/btn_erozyon" to="." method="_on_btn_erozyon_pressed"]
 [connection signal="pressed" from="Geri" to="." method="_on_geri_pressed"]
