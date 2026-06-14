@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://rydo7tjdv272"]
+[gd_scene format=3 uid="uid://rydo7tjdv272"]
 
 [ext_resource type="Texture2D" uid="uid://cw5ddguqju6eq" path="res://UI/PNG/Blue/Default/button_rectangle_depth_gloss.png" id="1_2rxeu"]
 [ext_resource type="Texture2D" uid="uid://dljm4st0nh6jc" path="res://UI/PNG/Blue/Default/button_rectangle_depth_gradient.png" id="2_7lff7"]
@@ -93,7 +93,7 @@ corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 
-[node name="AnaMenu" type="Control"]
+[node name="AnaMenu" type="Control" unique_id=195584119]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -103,7 +103,7 @@ grow_vertical = 2
 theme = SubResource("Theme_1nl3g")
 script = ExtResource("5_7cuqp")
 
-[node name="ArkaPlan" type="TextureRect" parent="."]
+[node name="ArkaPlan" type="TextureRect" parent="." unique_id=1571086805]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -114,29 +114,29 @@ texture = ExtResource("6_6xv6y")
 expand_mode = 2
 stretch_mode = 6
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=209680437]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -220.0
-offset_top = -231.0
-offset_right = 220.0
-offset_bottom = 231.0
+offset_left = -467.0
+offset_top = -267.0
+offset_right = 474.5
+offset_bottom = 267.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 44
 
-[node name="OyunIsmi" type="Label" parent="VBoxContainer"]
+[node name="OyunIsmi" type="Label" parent="VBoxContainer" unique_id=666620304]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.38500562, 0.6399329, 0, 1)
-text = "DOGAL AFET"
+text = "AFET DEDEKTIFLERI"
 label_settings = SubResource("LabelSettings_runbn")
 
-[node name="OynaButonu" type="Button" parent="VBoxContainer"]
+[node name="OynaButonu" type="Button" parent="VBoxContainer" unique_id=1511180407]
 custom_minimum_size = Vector2(188.525, 82.19)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -146,7 +146,7 @@ theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 text = "OYNA"
 
-[node name="Ayarlar" type="Button" parent="VBoxContainer"]
+[node name="Ayarlar" type="Button" parent="VBoxContainer" unique_id=1875027936]
 custom_minimum_size = Vector2(188.525, 82.19)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -154,14 +154,14 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "AYARLAR
 "
 
-[node name="Cikis" type="Button" parent="VBoxContainer"]
+[node name="Cikis" type="Button" parent="VBoxContainer" unique_id=1044648728]
 custom_minimum_size = Vector2(188.525, 82.19)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "CIKIS"
 
-[node name="AyarlarPaneli" type="Panel" parent="."]
+[node name="AyarlarPaneli" type="Panel" parent="." unique_id=1913917622]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -177,7 +177,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_b1wvl")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="AyarlarPaneli"]
+[node name="VBoxContainer" type="VBoxContainer" parent="AyarlarPaneli" unique_id=324034756]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -186,38 +186,38 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 39
 
-[node name="AyarYazi" type="Label" parent="AyarlarPaneli/VBoxContainer"]
+[node name="AyarYazi" type="Label" parent="AyarlarPaneli/VBoxContainer" unique_id=1025348286]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 70
 text = "AYARLAR"
 horizontal_alignment = 1
 
-[node name="MuzikSesi" type="Label" parent="AyarlarPaneli/VBoxContainer"]
+[node name="MuzikSesi" type="Label" parent="AyarlarPaneli/VBoxContainer" unique_id=1701007413]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 45
 text = "Müzik Sesi"
 
-[node name="Muzik" type="HSlider" parent="AyarlarPaneli/VBoxContainer"]
+[node name="Muzik" type="HSlider" parent="AyarlarPaneli/VBoxContainer" unique_id=2029564693]
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="SesEfekSesi" type="Label" parent="AyarlarPaneli/VBoxContainer"]
+[node name="SesEfekSesi" type="Label" parent="AyarlarPaneli/VBoxContainer" unique_id=1508935268]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 45
 text = "Efekt Sesi"
 
-[node name="SesEfekti" type="HSlider" parent="AyarlarPaneli/VBoxContainer"]
+[node name="SesEfekti" type="HSlider" parent="AyarlarPaneli/VBoxContainer" unique_id=1801206485]
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Geri" type="Button" parent="AyarlarPaneli/VBoxContainer"]
+[node name="Geri" type="Button" parent="AyarlarPaneli/VBoxContainer" unique_id=792038047]
 custom_minimum_size = Vector2(109.855, 57.86)
 layout_mode = 2
 size_flags_horizontal = 4

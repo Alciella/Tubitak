@@ -1,0 +1,23 @@
+[gd_resource type="Theme" format=3 uid="uid://iukq480f3mjy"]
+
+[ext_resource type="FontFile" uid="uid://b28eqe7euiy5k" path="res://Chewy-Regular.ttf" id="1_6rgb0"]
+[ext_resource type="Texture2D" uid="uid://druk7s5sxi1fp" path="res://resimler/hover.svg" id="2_6rgb0"]
+[ext_resource type="Texture2D" uid="uid://bgn8aotc5nuu" path="res://resimler/pressed.svg" id="4_6rgb0"]
+[ext_resource type="Texture2D" uid="uid://cvrgi17hj5rsp" path="res://resimler/normal.svg" id="4_08jry"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nft0o"]
+texture = ExtResource("2_6rgb0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_78ylj"]
+texture = ExtResource("4_08jry")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nkfox"]
+texture = ExtResource("4_6rgb0")
+
+[resource]
+default_font = ExtResource("1_6rgb0")
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/fonts/font = ExtResource("1_6rgb0")
+Button/styles/hover = SubResource("StyleBoxTexture_nft0o")
+Button/styles/normal = SubResource("StyleBoxTexture_78ylj")
+Button/styles/pressed = SubResource("StyleBoxTexture_nkfox")

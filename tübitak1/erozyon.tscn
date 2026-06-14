@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://ce3tc0x5yk4x1"]
+
+[ext_resource type="Texture2D" uid="uid://dpt55q4fbknhg" path="res://resimler/erozyon arkaplan.png" id="1_xhg31"]
+[ext_resource type="Texture2D" uid="uid://bgwsdbslxry5" path="res://resimler/erozyon_karakter.png" id="2_jlxft"]
+
+[node name="erozyon1" type="Node2D" unique_id=943021292]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1124012669]
+offset_right = 1151.0
+offset_bottom = 649.0
+texture = ExtResource("1_xhg31")
+expand_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="TextureRect" unique_id=738380105]
+position = Vector2(85, 490.00003)
+scale = Vector2(0.23889151, 0.23889156)
+texture = ExtResource("2_jlxft")
