@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://ce3tc0x5yk4x1"]
+[gd_scene load_steps=0 format=3 uid="uid://ce3tc0x5yk4x1"]
 
 [ext_resource type="Texture2D" uid="uid://dpt55q4fbknhg" path="res://resimler/erozyon arkaplan.png" id="1_xhg31"]
 [ext_resource type="Texture2D" uid="uid://bgwsdbslxry5" path="res://resimler/erozyon_karakter.png" id="2_jlxft"]

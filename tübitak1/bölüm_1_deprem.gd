@@ -17,6 +17,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if bitiş==6 && bitti==false:
+		
 		$"Oda/bitiş".visible=true
 		$"bitişSes".play()
 		bitti=true
