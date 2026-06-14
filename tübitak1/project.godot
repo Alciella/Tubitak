@@ -18,6 +18,10 @@ config/name="tübitak1"
 run/main_scene="uid://rydo7tjdv272"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 
+[autoload]
+
+GameState="*uid://ciitklws3o08x"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

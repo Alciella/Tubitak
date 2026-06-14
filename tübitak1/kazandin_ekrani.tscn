@@ -20,31 +20,31 @@ corner_radius_bottom_left = 50
 
 [node name="KazandinEkrani" type="CanvasLayer" unique_id=1416714717]
 
-[node name="Panel" type="Panel" parent="." unique_id=1738852627]
+[node name="bitiş" type="Panel" parent="." unique_id=1738852627]
 offset_left = 219.0
 offset_top = 84.0
 offset_right = 981.06494
 offset_bottom = 512.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_iexrf")
 
-[node name="Yıldız" type="Sprite2D" parent="Panel" unique_id=351264279]
+[node name="Yıldız" type="Sprite2D" parent="bitiş" unique_id=351264279]
 position = Vector2(132, 187)
 rotation = -0.37292263
 scale = Vector2(0.048996165, 0.048996143)
 texture = ExtResource("2_tgo3n")
 
-[node name="Kutlama" type="Sprite2D" parent="Panel" unique_id=2100442092]
+[node name="Kutlama" type="Sprite2D" parent="bitiş" unique_id=2100442092]
 position = Vector2(636.243, 84.24487)
 rotation = 0.2284932
 scale = Vector2(0.30943996, 0.30943996)
 texture = ExtResource("4_5yvl4")
 
-[node name="Madalya" type="Sprite2D" parent="Panel" unique_id=1871297024]
+[node name="Madalya" type="Sprite2D" parent="bitiş" unique_id=1871297024]
 position = Vector2(90, 69.000046)
 scale = Vector2(0.26791808, 0.2679181)
 texture = ExtResource("5_2keoi")
 
-[node name="geri" type="Button" parent="Panel" unique_id=920282894]
+[node name="geri" type="Button" parent="bitiş" unique_id=920282894]
 layout_mode = 0
 offset_left = 48.0
 offset_top = 321.0
@@ -58,7 +58,7 @@ theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 text = "GERI"
 
-[node name="sonraki" type="Button" parent="Panel" unique_id=179984894]
+[node name="sonraki" type="Button" parent="bitiş" unique_id=179984894]
 layout_mode = 0
 offset_left = 603.0
 offset_top = 318.0
@@ -72,7 +72,7 @@ theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 text = "SONRAKI"
 
-[node name="yazı" type="Label" parent="Panel" unique_id=1845253271]
+[node name="yazı" type="Label" parent="bitiş" unique_id=1845253271]
 layout_mode = 0
 offset_left = 197.0
 offset_top = 39.0

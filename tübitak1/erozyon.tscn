@@ -12,6 +12,6 @@ texture = ExtResource("1_xhg31")
 expand_mode = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="TextureRect" unique_id=738380105]
-position = Vector2(85, 490.00003)
+position = Vector2(82.99998, 426.00003)
 scale = Vector2(0.23889151, 0.23889156)
 texture = ExtResource("2_jlxft")

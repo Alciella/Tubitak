@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://suu48s3eebim"]
+[gd_scene format=3 uid="uid://suu48s3eebim"]
 
 [ext_resource type="FontFile" uid="uid://b28eqe7euiy5k" path="res://Chewy-Regular.ttf" id="1_b08fw"]
 [ext_resource type="Script" uid="uid://corgrlcmp6r0j" path="res://bolumler_menu.gd" id="1_em1ge"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://37m7h7g2ndms" path="res://UI/yangın.jpg" id="3_em1ge"]
 [ext_resource type="Texture2D" uid="uid://c3gdlnt6iaeuq" path="res://UI/kilit.png" id="4_luy7h"]
 [ext_resource type="Texture2D" uid="uid://5emigsm25u6s" path="res://UI/erozyon.jpg" id="5_8qovh"]
-[ext_resource type="Texture2D" uid="uid://bcys7kprul0fv" path="res://UI/sel.jpg" id="6_fdl54"]
 [ext_resource type="Texture2D" uid="uid://dljm4st0nh6jc" path="res://UI/PNG/Blue/Default/button_rectangle_depth_gradient.png" id="8_fdl54"]
 [ext_resource type="Texture2D" uid="uid://cf8t1i54kxv7e" path="res://UI/PNG/Blue/Default/button_rectangle_depth_flat.png" id="9_42ojf"]
 [ext_resource type="Texture2D" uid="uid://cw5ddguqju6eq" path="res://UI/PNG/Blue/Default/button_rectangle_depth_gloss.png" id="10_f54xq"]
@@ -43,7 +42,7 @@ texture = ExtResource("9_42ojf")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p1tj8"]
 texture = ExtResource("10_f54xq")
 
-[node name="BolumlerMenu" type="Control"]
+[node name="BolumlerMenu" type="Control" unique_id=743776534]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -52,52 +51,41 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_em1ge")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=1085815474]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 3.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_i3e16")
 
-[node name="Bolumler" type="Label" parent="Panel"]
+[node name="Bolumler" type="Label" parent="Panel" unique_id=1475324431]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -96.0
-offset_top = 9.0
-offset_right = 105.0
-offset_bottom = 69.0
+offset_left = -109.0
+offset_top = 12.0
+offset_right = 92.0
+offset_bottom = 72.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("1_b08fw")
 theme_override_font_sizes/font_size = 46
 text = "BÖLÜMLER"
 
-[node name="BolumlerGrid" type="GridContainer" parent="Panel"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -437.0
-offset_top = -555.0
-offset_right = 442.0
-offset_bottom = -41.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_constants/h_separation = 184
-theme_override_constants/v_separation = 49
-columns = 2
+[node name="BolumlerGrid" type="Node2D" parent="Panel" unique_id=1882152282]
 
-[node name="Deprem" type="Button" parent="Panel/BolumlerGrid"]
+[node name="Deprem" type="Button" parent="Panel/BolumlerGrid" unique_id=1101983268]
 custom_minimum_size = Vector2(348.155, 200)
-layout_mode = 2
+offset_left = 89.0
+offset_top = 91.0
+offset_right = 437.155
+offset_bottom = 291.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_42ojf")
 
-[node name="Label" type="Label" parent="Panel/BolumlerGrid/Deprem"]
+[node name="Label" type="Label" parent="Panel/BolumlerGrid/Deprem" unique_id=245085893]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -110,7 +98,7 @@ theme_override_fonts/font = ExtResource("1_b08fw")
 theme_override_font_sizes/font_size = 26
 text = "DEPREM"
 
-[node name="TextureRect" type="TextureRect" parent="Panel/BolumlerGrid/Deprem"]
+[node name="TextureRect" type="TextureRect" parent="Panel/BolumlerGrid/Deprem" unique_id=487079864]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -120,12 +108,15 @@ grow_vertical = 2
 texture = ExtResource("2_8bkv0")
 expand_mode = 1
 
-[node name="Button2" type="Button" parent="Panel/BolumlerGrid"]
+[node name="btn_yangın" type="Button" parent="Panel/BolumlerGrid" unique_id=882806363]
 custom_minimum_size = Vector2(348.155, 200)
-layout_mode = 2
+offset_left = 707.0
+offset_top = 90.0
+offset_right = 1055.155
+offset_bottom = 290.0
 disabled = true
 
-[node name="Label" type="Label" parent="Panel/BolumlerGrid/Button2"]
+[node name="Label" type="Label" parent="Panel/BolumlerGrid/btn_yangın" unique_id=1996706841]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -140,7 +131,7 @@ theme_override_fonts/font = ExtResource("1_b08fw")
 theme_override_font_sizes/font_size = 26
 text = "YANGIN"
 
-[node name="TextureRect" type="TextureRect" parent="Panel/BolumlerGrid/Button2"]
+[node name="TextureRect" type="TextureRect" parent="Panel/BolumlerGrid/btn_yangın" unique_id=691922432]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -150,7 +141,7 @@ grow_vertical = 2
 texture = ExtResource("3_em1ge")
 expand_mode = 1
 
-[node name="KilitKatman" type="ColorRect" parent="Panel/BolumlerGrid/Button2"]
+[node name="KilitKatman" type="ColorRect" parent="Panel/BolumlerGrid/btn_yangın" unique_id=92939465]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -159,7 +150,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.78431374)
 
-[node name="TextureRect" type="TextureRect" parent="Panel/BolumlerGrid/Button2/KilitKatman"]
+[node name="TextureRect" type="TextureRect" parent="Panel/BolumlerGrid/btn_yangın/KilitKatman" unique_id=1054836975]
 custom_minimum_size = Vector2(42.57, 0)
 layout_mode = 1
 anchors_preset = 8
@@ -177,12 +168,15 @@ texture = ExtResource("4_luy7h")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Button3" type="Button" parent="Panel/BolumlerGrid"]
+[node name="btn_erozyon" type="Button" parent="Panel/BolumlerGrid" unique_id=1848371071]
 custom_minimum_size = Vector2(348.155, 200)
-layout_mode = 2
+offset_left = 395.0
+offset_top = 335.0
+offset_right = 743.155
+offset_bottom = 535.0
 disabled = true
 
-[node name="Label" type="Label" parent="Panel/BolumlerGrid/Button3"]
+[node name="Label" type="Label" parent="Panel/BolumlerGrid/btn_erozyon" unique_id=171284103]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -195,7 +189,7 @@ theme_override_fonts/font = ExtResource("1_b08fw")
 theme_override_font_sizes/font_size = 26
 text = "EROZYON"
 
-[node name="TextureRect" type="TextureRect" parent="Panel/BolumlerGrid/Button3"]
+[node name="TextureRect" type="TextureRect" parent="Panel/BolumlerGrid/btn_erozyon" unique_id=703761766]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -205,7 +199,7 @@ grow_vertical = 2
 texture = ExtResource("5_8qovh")
 expand_mode = 1
 
-[node name="KilitKatman" type="ColorRect" parent="Panel/BolumlerGrid/Button3"]
+[node name="KilitKatman" type="ColorRect" parent="Panel/BolumlerGrid/btn_erozyon" unique_id=1870628977]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -214,7 +208,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.78431374)
 
-[node name="TextureRect" type="TextureRect" parent="Panel/BolumlerGrid/Button3/KilitKatman"]
+[node name="TextureRect" type="TextureRect" parent="Panel/BolumlerGrid/btn_erozyon/KilitKatman" unique_id=1713827500]
 custom_minimum_size = Vector2(42.57, 0)
 layout_mode = 1
 anchors_preset = 8
@@ -232,64 +226,7 @@ texture = ExtResource("4_luy7h")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Button4" type="Button" parent="Panel/BolumlerGrid"]
-custom_minimum_size = Vector2(348.155, 200)
-layout_mode = 2
-disabled = true
-
-[node name="Label" type="Label" parent="Panel/BolumlerGrid/Button4"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.577515
-offset_top = -33.000004
-offset_right = 19.422485
-offset_bottom = 0.9999962
-grow_horizontal = 2
-rotation = 0.0009556034
-theme_override_fonts/font = ExtResource("1_b08fw")
-theme_override_font_sizes/font_size = 26
-text = "SEL"
-
-[node name="TextureRect" type="TextureRect" parent="Panel/BolumlerGrid/Button4"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("6_fdl54")
-expand_mode = 1
-
-[node name="KilitKatman" type="ColorRect" parent="Panel/BolumlerGrid/Button4"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 0.78431374)
-
-[node name="TextureRect" type="TextureRect" parent="Panel/BolumlerGrid/Button4/KilitKatman"]
-custom_minimum_size = Vector2(42.57, 0)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -35.120247
-offset_top = -33.0
-offset_right = 35.120247
-offset_bottom = 33.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("4_luy7h")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="Geri" type="Button" parent="."]
+[node name="Geri" type="Button" parent="." unique_id=1294706586]
 custom_minimum_size = Vector2(109.855, 57.86)
 layout_mode = 1
 anchors_preset = 7
@@ -297,10 +234,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -46.0
-offset_top = -84.0
-offset_right = 63.85498
-offset_bottom = -26.140015
+offset_left = -53.0
+offset_top = -88.0
+offset_right = 56.85498
+offset_bottom = -30.140015
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 4
@@ -313,4 +250,5 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_p1tj8")
 text = "GERI"
 
 [connection signal="pressed" from="Panel/BolumlerGrid/Deprem" to="." method="_on_deprem_pressed"]
+[connection signal="pressed" from="Panel/BolumlerGrid/btn_yangın" to="." method="_on_btn_yangın_pressed"]
 [connection signal="pressed" from="Geri" to="." method="_on_geri_pressed"]

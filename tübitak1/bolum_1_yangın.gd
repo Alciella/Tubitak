@@ -3,6 +3,7 @@ var bitis=0
 var bolum=0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$TextureRect.visible = false
 	pass # Replace with function body.
 
 
@@ -16,9 +17,11 @@ func _process(delta: float) -> void:
 
 func _on_ateş_pressed() -> void:
 	$"ateş".visible=false
+	$TextureRect.visible=true
+	
 	$Kagit.visible=false
-
 	$Kagit2.visible=true
+	
 	bolum=1
 	$butonlar/Sigara.pulse()
 	$butonlar/TextureButton.pulse()
@@ -130,4 +133,9 @@ func _on_texture_button_13_pressed() -> void:
 	if bolum==1:
 		$butonlar/TextureButton13.visible=false
 		bitis=bitis+1
+	pass # Replace with function body.
+
+
+func _on_geri_pressed() -> void:
+	get_tree().change_scene_to_file("res://bolumler_menu.tscn")
 	pass # Replace with function body.

@@ -95,3 +95,9 @@ func _on_tutun_pressed() -> void:
 func _on_geri_pressed() -> void:
 	get_tree().change_scene_to_file("res://bolumler_menu.tscn")
 	pass # Replace with function body.
+
+
+func _on_sonraki_pressed() -> void:
+	GameState.unlock_level("yangin")
+	get_tree().change_scene_to_file("res://bolumler_menu.tscn")
+	pass # Replace with function body.
