@@ -1,17 +1,96 @@
 [gd_scene format=3 uid="uid://ce3tc0x5yk4x1"]
 
-[ext_resource type="Texture2D" uid="uid://dpt55q4fbknhg" path="res://resimler/erozyon arkaplan.png" id="1_xhg31"]
+[ext_resource type="Script" uid="uid://bt10vctwabrio" path="res://erozyon.gd" id="1_2isja"]
+[ext_resource type="Texture2D" uid="uid://dis6n23j2dl7x" path="res://resimler/bosarazi.png" id="2_3wsei"]
 [ext_resource type="Texture2D" uid="uid://bgwsdbslxry5" path="res://resimler/erozyon_karakter.png" id="2_jlxft"]
+[ext_resource type="Texture2D" uid="uid://c1k1akniijg74" path="res://resimler/yarmtarac.png" id="3_nrk57"]
+[ext_resource type="Texture2D" uid="uid://dd4v18bxi1f1n" path="res://resimler/tumtarac.png" id="4_n6q6d"]
+[ext_resource type="Texture2D" uid="uid://olvq5tongsxu" path="res://resimler/kurek.png" id="5_e6h7f"]
+[ext_resource type="Texture2D" uid="uid://dx51qt2f07w7" path="res://resimler/kureksizusak.png" id="6_iauuk"]
+[ext_resource type="Script" uid="uid://8064qhp65r6f" path="res://texture_button.gd" id="6_n6q6d"]
+[ext_resource type="Texture2D" uid="uid://3447ufbirvph" path="res://resimler/resim-Photoroom.png" id="8_hnte6"]
+[ext_resource type="Script" uid="uid://dyop8fim3vc7h" path="res://ok.gd" id="9_3wsei"]
+[ext_resource type="Script" uid="uid://sil0kt5h8w7e" path="res://ok_2.gd" id="10_nrk57"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2isja"]
+size = Vector2(465.5, 644)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3wsei"]
+size = Vector2(668, 633)
 
 [node name="erozyon1" type="Node2D" unique_id=943021292]
+script = ExtResource("1_2isja")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1124012669]
 offset_right = 1151.0
 offset_bottom = 649.0
-texture = ExtResource("1_xhg31")
+texture = ExtResource("2_3wsei")
 expand_mode = 1
 
-[node name="Sprite2D" type="Sprite2D" parent="TextureRect" unique_id=738380105]
-position = Vector2(82.99998, 426.00003)
+[node name="Yarmtarac" type="Sprite2D" parent="." unique_id=1288564408]
+visible = false
+position = Vector2(575.6825, 323.52)
+scale = Vector2(0.44685695, 0.38764426)
+texture = ExtResource("3_nrk57")
+
+[node name="Tumtarac" type="Sprite2D" parent="." unique_id=198077926]
+visible = false
+position = Vector2(576.04877, 322.86002)
+scale = Vector2(0.4489098, 0.38685095)
+texture = ExtResource("4_n6q6d")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=397965972]
+offset_left = -329.0001
+offset_top = -250.00003
+offset_right = 2071.0
+offset_bottom = 1351.0
+scale = Vector2(0.105, 0.105)
+pivot_offset = Vector2(1200, 800)
+texture_normal = ExtResource("5_e6h7f")
+script = ExtResource("6_n6q6d")
+
+[node name="Kureksizusak" type="Sprite2D" parent="." unique_id=1485444736]
+position = Vector2(1038, 544)
+scale = Vector2(0.14, 0.14)
+texture = ExtResource("6_iauuk")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=738380105]
+visible = false
+position = Vector2(1036, 541)
 scale = Vector2(0.23889151, 0.23889156)
 texture = ExtResource("2_jlxft")
+
+[node name="ok" type="Sprite2D" parent="." unique_id=970296693]
+visible = false
+position = Vector2(976, 145)
+rotation = 1.584759
+scale = Vector2(0.064, 0.066)
+texture = ExtResource("8_hnte6")
+script = ExtResource("9_3wsei")
+
+[node name="ok2" type="Sprite2D" parent="." unique_id=1817736193]
+visible = false
+position = Vector2(300, 343)
+rotation = 1.584759
+scale = Vector2(0.064, 0.066)
+texture = ExtResource("8_hnte6")
+script = ExtResource("10_nrk57")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1163000554]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1030345562]
+position = Vector2(910.25, 325)
+shape = SubResource("RectangleShape2D_2isja")
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=548978007]
+visible = false
+position = Vector2(258, 230)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1544507592]
+position = Vector2(73, 88.5)
+shape = SubResource("RectangleShape2D_3wsei")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Area2D2" to="." method="_on_area_2d_2_input_event"]
