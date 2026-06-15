@@ -32,6 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://cgjy6row0vor" path="res://resimler/madalya.webp" id="30_o42si"]
 [ext_resource type="Theme" uid="uid://iukq480f3mjy" path="res://button.tres" id="31_uhluh"]
 [ext_resource type="FontFile" uid="uid://b28eqe7euiy5k" path="res://Chewy-Regular.ttf" id="32_6y6ap"]
+[ext_resource type="AudioStream" uid="uid://c0fm11stda878" path="res://ses/winsfx.mp3" id="33_wytel"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ei6qm"]
 bg_color = Color(0.10980392, 0.62352943, 0.84313726, 1)
@@ -354,6 +355,10 @@ theme_override_fonts/font = ExtResource("32_6y6ap")
 theme_override_font_sizes/font_size = 81
 text = "TEBRIKLER
 KAZANDINIZ"
+
+[node name="bitiş_sesi" type="AudioStreamPlayer2D" parent="." unique_id=1623110124]
+stream = ExtResource("33_wytel")
+volume_db = -6.275
 
 [connection signal="pressed" from="ateş" to="." method="_on_ateş_pressed"]
 [connection signal="pressed" from="butonlar/Sigara" to="." method="_on_sigara_pressed"]

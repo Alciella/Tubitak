@@ -26,8 +26,9 @@ func _process(delta: float) -> void:
 	if bir==1 && iki==1 && üç==1 && bitti==false:
 		$"menü".visible=false
 		$"bitiş".visible=true
+		$depremRoot/arkaplan/cocuk2.visible=false
 		$depremRoot/arkaplan/cocuk3.visible=false
-		$cocuk1.visible=true
+		$cocuk1.visible=false
 		$depremRoot/arkaplan.kill()
 		bitti=true
 		$bitti.play()

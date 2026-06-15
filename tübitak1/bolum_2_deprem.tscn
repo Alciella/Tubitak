@@ -214,6 +214,7 @@ stream = ExtResource("14_550ym")
 
 [node name="bitti" type="AudioStreamPlayer2D" parent="." unique_id=1314206965]
 stream = ExtResource("15_550ym")
+volume_db = -9.959
 
 [node name="bitiş" type="Panel" parent="." unique_id=1752093774]
 visible = false

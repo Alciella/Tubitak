@@ -1,6 +1,7 @@
 extends Node2D
 var bitis=0
 var bolum=0
+var birkere=0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 
@@ -9,10 +10,12 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if bitis==14:
+	if bitis==14 and birkere==0:
+		birkere=1
 		$"bitiş".visible=true
-		
+		$"bitiş_sesi".play()
 	pass
+
 
 
 func _on_ateş_pressed() -> void:

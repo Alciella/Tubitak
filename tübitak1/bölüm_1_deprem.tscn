@@ -547,6 +547,7 @@ autoplay = true
 
 [node name="bitişSes" type="AudioStreamPlayer2D" parent="." unique_id=1295104543]
 stream = ExtResource("31_qmp01")
+volume_db = -13.448
 
 [connection signal="pressed" from="Oda/butonlar/flashlight_button" to="." method="_on_flashlight_pressed"]
 [connection signal="pressed" from="Oda/butonlar/top_interactive" to="." method="_on_top_interactive_pressed"]
