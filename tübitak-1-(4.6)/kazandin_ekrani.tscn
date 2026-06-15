@@ -1,0 +1,84 @@
+[gd_scene load_steps=0 format=3 uid="uid://s3rlhraajw6n"]
+
+[ext_resource type="FontFile" uid="uid://b28eqe7euiy5k" path="res://Chewy-Regular.ttf" id="1_tgo3n"]
+[ext_resource type="Theme" uid="uid://iukq480f3mjy" path="res://button.tres" id="2_8vkgs"]
+[ext_resource type="Texture2D" uid="uid://bpwldkai20ikv" path="res://resimler/yıldız.png" id="2_tgo3n"]
+[ext_resource type="Texture2D" uid="uid://bfvyvo3pucg4h" path="res://resimler/kutlama.png" id="4_5yvl4"]
+[ext_resource type="Texture2D" uid="uid://cgjy6row0vor" path="res://resimler/madalya.webp" id="5_2keoi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iexrf"]
+bg_color = Color(0.10980392, 0.62352943, 0.84313726, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[node name="KazandinEkrani" type="CanvasLayer" unique_id=1416714717]
+
+[node name="bitiş" type="Panel" parent="." unique_id=1738852627]
+offset_left = 219.0
+offset_top = 84.0
+offset_right = 981.06494
+offset_bottom = 512.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iexrf")
+
+[node name="Yıldız" type="Sprite2D" parent="bitiş" unique_id=351264279]
+position = Vector2(132, 187)
+rotation = -0.37292263
+scale = Vector2(0.048996165, 0.048996143)
+texture = ExtResource("2_tgo3n")
+
+[node name="Kutlama" type="Sprite2D" parent="bitiş" unique_id=2100442092]
+position = Vector2(636.243, 84.24487)
+rotation = 0.2284932
+scale = Vector2(0.30943996, 0.30943996)
+texture = ExtResource("4_5yvl4")
+
+[node name="Madalya" type="Sprite2D" parent="bitiş" unique_id=1871297024]
+position = Vector2(90, 69.000046)
+scale = Vector2(0.26791808, 0.2679181)
+texture = ExtResource("5_2keoi")
+
+[node name="geri" type="Button" parent="bitiş" unique_id=920282894]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 321.0
+offset_right = 176.4
+offset_bottom = 381.0
+theme = ExtResource("2_8vkgs")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+text = "GERI"
+
+[node name="sonraki" type="Button" parent="bitiş" unique_id=179984894]
+layout_mode = 0
+offset_left = 603.0
+offset_top = 318.0
+offset_right = 731.4
+offset_bottom = 378.0
+theme = ExtResource("2_8vkgs")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+text = "SONRAKI"
+
+[node name="yazı" type="Label" parent="bitiş" unique_id=1845253271]
+layout_mode = 0
+offset_left = 197.0
+offset_top = 39.0
+offset_right = 601.0
+offset_bottom = 252.0
+theme_override_fonts/font = ExtResource("1_tgo3n")
+theme_override_font_sizes/font_size = 81
+text = "TEBRIKLER
+KAZANDINIZ"

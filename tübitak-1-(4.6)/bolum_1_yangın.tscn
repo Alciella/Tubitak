@@ -1,0 +1,374 @@
+[gd_scene format=3 uid="uid://dhadsoor3wu62"]
+
+[ext_resource type="Texture2D" uid="uid://bycpmrd5ofqxv" path="res://resimler/dztx_qmc7_201221_ss4mp_generated.jpg" id="1_bs4n3"]
+[ext_resource type="Script" uid="uid://ca7g47pyi1j4n" path="res://bolum_1_yangın.gd" id="1_gkkys"]
+[ext_resource type="Texture2D" uid="uid://ds1uv3p524rt8" path="res://resimler/sigara.png" id="3_r6lvn"]
+[ext_resource type="Texture2D" uid="uid://dtw1o3snsnmu7" path="res://resimler/cig 2.png" id="4_oy4ur"]
+[ext_resource type="Texture2D" uid="uid://c8qy43lml36tu" path="res://resimler/çöp poşeti.png" id="5_fxkqw"]
+[ext_resource type="Texture2D" uid="uid://chfmahd663end" path="res://resimler/kagit.png" id="6_0f4ph"]
+[ext_resource type="Script" path="res://ateş.gd" id="6_jmag3"]
+[ext_resource type="Texture2D" uid="uid://22rn2ae8i7ys" path="res://resimler/fire.png" id="7_vg6fj"]
+[ext_resource type="Texture2D" uid="uid://c6rvnwiwak7g4" path="res://resimler/extinguish.png" id="8_pqk0f"]
+[ext_resource type="Texture2D" uid="uid://3447ufbirvph" path="res://resimler/resim-Photoroom.png" id="9_3gb4s"]
+[ext_resource type="Texture2D" uid="uid://c7m5yip00p21i" path="res://resimler/glass4.png" id="9_vg6fj"]
+[ext_resource type="Texture2D" uid="uid://yjvck5j3awcs" path="res://resimler/cam1.png" id="10_pqk0f"]
+[ext_resource type="Texture2D" uid="uid://b707hqln5e5e4" path="res://resimler/cop.png" id="11_pqk0f"]
+[ext_resource type="Script" path="res://butonlar.gd" id="12_3gb4s"]
+[ext_resource type="Script" path="res://sigara.gd" id="14_3bqt8"]
+[ext_resource type="Script" path="res://sigara2.gd" id="15_5vbpv"]
+[ext_resource type="Texture2D" uid="uid://b0ieuexpmdjhs" path="res://resimler/bottle1.png" id="16_1mhcf"]
+[ext_resource type="Texture2D" uid="uid://clagptblmgmwg" path="res://resimler/bottle2.png" id="17_5vbpv"]
+[ext_resource type="Texture2D" uid="uid://dsrsa4k5rtnsc" path="res://resimler/bottle3.png" id="18_4y0vi"]
+[ext_resource type="Texture2D" uid="uid://qsx7yu1d2ep3" path="res://resimler/glass1.png" id="19_nugvb"]
+[ext_resource type="Texture2D" uid="uid://77egs2c7h527" path="res://resimler/glass2.png" id="20_ncv0v"]
+[ext_resource type="Texture2D" uid="uid://c8hoarojj22f7" path="res://resimler/glass3.png" id="21_dipfd"]
+[ext_resource type="Texture2D" uid="uid://gs14r2l56v20" path="res://resimler/cam2.png" id="23_tj8kc"]
+[ext_resource type="Texture2D" uid="uid://b80tkentotqho" path="res://resimler/cam3.png" id="24_t5lso"]
+[ext_resource type="Texture2D" uid="uid://cr8tqrlta86mi" path="res://resimler/cam4.png" id="25_swftf"]
+[ext_resource type="Texture2D" uid="uid://b6cblo2s2om0q" path="res://resimler/cam6.png" id="26_1vxpc"]
+[ext_resource type="Texture2D" uid="uid://jn0xpauoltwk" path="res://resimler/cam7.png" id="27_2swca"]
+[ext_resource type="Texture2D" uid="uid://bpwldkai20ikv" path="res://resimler/yıldız.png" id="28_duxbh"]
+[ext_resource type="Texture2D" uid="uid://bfvyvo3pucg4h" path="res://resimler/kutlama.png" id="29_wytel"]
+[ext_resource type="Texture2D" uid="uid://cgjy6row0vor" path="res://resimler/madalya.webp" id="30_o42si"]
+[ext_resource type="Theme" uid="uid://iukq480f3mjy" path="res://button.tres" id="31_uhluh"]
+[ext_resource type="FontFile" uid="uid://b28eqe7euiy5k" path="res://Chewy-Regular.ttf" id="32_6y6ap"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ei6qm"]
+bg_color = Color(0.10980392, 0.62352943, 0.84313726, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[node name="bolum1yangın" type="Node2D" unique_id=814502195]
+script = ExtResource("1_gkkys")
+
+[node name="DztxQmc7201221Ss4MpGenerated" type="Sprite2D" parent="." unique_id=334468506]
+position = Vector2(581, 321)
+scale = Vector2(0.59749997, 0.59)
+texture = ExtResource("1_bs4n3")
+
+[node name="ÇöpPoşeti" type="Sprite2D" parent="." unique_id=959306763]
+visible = false
+position = Vector2(216, 584)
+texture = ExtResource("5_fxkqw")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=531428823]
+visible = false
+offset_left = 479.0
+offset_top = 332.0
+offset_right = 859.0
+offset_bottom = 843.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("8_pqk0f")
+
+[node name="ateş" type="TextureButton" parent="." unique_id=353335044]
+offset_left = 154.99997
+offset_top = -152.0
+offset_right = 955.0
+offset_bottom = 1011.15796
+scale = Vector2(0.19, 0.19)
+pivot_offset = Vector2(400, 580)
+texture_normal = ExtResource("7_vg6fj")
+stretch_mode = 0
+script = ExtResource("6_jmag3")
+
+[node name="Kagit2" type="Sprite2D" parent="." unique_id=579464361]
+position = Vector2(924.99994, 494)
+scale = Vector2(0.525, 0.525)
+texture = ExtResource("6_0f4ph")
+
+[node name="Cig2" type="Sprite2D" parent="Kagit2" unique_id=152862215]
+position = Vector2(-108.57138, -154.28564)
+scale = Vector2(0.15238097, 0.15238097)
+texture = ExtResource("4_oy4ur")
+
+[node name="Glass4" type="Sprite2D" parent="Kagit2" unique_id=1069703721]
+position = Vector2(6.1035156e-05, -159.99995)
+scale = Vector2(0.215, 0.215)
+texture = ExtResource("9_vg6fj")
+
+[node name="ResimPhotoroom" type="Sprite2D" parent="Kagit2" unique_id=470702226]
+position = Vector2(-99.04762, -47.618988)
+rotation = 1.2139827
+scale = Vector2(0.08889766, 0.09630478)
+texture = ExtResource("9_3gb4s")
+
+[node name="ResimPhotoroom2" type="Sprite2D" parent="Kagit2" unique_id=1676523845]
+position = Vector2(-3.8095245, -59.04756)
+rotation = 1.5760323
+scale = Vector2(0.08889766, 0.09630478)
+texture = ExtResource("9_3gb4s")
+
+[node name="ResimPhotoroom3" type="Sprite2D" parent="Kagit2" unique_id=1013844716]
+position = Vector2(83.80953, -53.333275)
+rotation = 1.9041542
+scale = Vector2(0.08889766, 0.09630478)
+texture = ExtResource("9_3gb4s")
+
+[node name="Cam1" type="Sprite2D" parent="Kagit2" unique_id=1715418243]
+position = Vector2(110.476135, -148.5714)
+scale = Vector2(0.799444, 0.9792087)
+texture = ExtResource("10_pqk0f")
+
+[node name="Cop" type="Sprite2D" parent="Kagit2" unique_id=1370123643]
+position = Vector2(-5.7142944, 93.33339)
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("11_pqk0f")
+
+[node name="Kagit" type="Sprite2D" parent="." unique_id=1884160316]
+position = Vector2(924.99994, 495.99997)
+scale = Vector2(0.525, 0.525)
+texture = ExtResource("6_0f4ph")
+
+[node name="Fire" type="Sprite2D" parent="Kagit" unique_id=960374674]
+position = Vector2(0.00024414063, -129.52374)
+scale = Vector2(0.35745865, 0.32285535)
+texture = ExtResource("7_vg6fj")
+
+[node name="Extinguish" type="Sprite2D" parent="Kagit" unique_id=176520983]
+position = Vector2(-1.9046631, 106.66687)
+scale = Vector2(0.34085226, 0.3159072)
+texture = ExtResource("8_pqk0f")
+
+[node name="ResimPhotoroom" type="Sprite2D" parent="Kagit" unique_id=1445794769]
+position = Vector2(-5.7142334, 17.142944)
+rotation = 1.5987216
+scale = Vector2(0.10715441, 0.13313924)
+texture = ExtResource("9_3gb4s")
+
+[node name="butonlar" type="Node2D" parent="." unique_id=659759994]
+position = Vector2(589, 385)
+script = ExtResource("12_3gb4s")
+
+[node name="Sigara" type="TextureButton" parent="butonlar" unique_id=1757408789]
+offset_left = -513.99994
+offset_top = -151.99998
+offset_right = -13.999939
+offset_bottom = 348.0
+scale = Vector2(0.1, 0.1)
+pivot_offset = Vector2(250, 250)
+texture_normal = ExtResource("3_r6lvn")
+stretch_mode = 3
+script = ExtResource("15_5vbpv")
+
+[node name="TextureButton" type="TextureButton" parent="butonlar" unique_id=260514474]
+offset_left = 374.99994
+offset_top = -72.99999
+offset_right = 615.99994
+offset_bottom = 362.0
+scale = Vector2(0.2, 0.2)
+pivot_offset = Vector2(120, 217)
+texture_normal = ExtResource("16_1mhcf")
+script = ExtResource("14_3bqt8")
+
+[node name="TextureButton2" type="TextureButton" parent="butonlar" unique_id=434142037]
+offset_left = -266.0
+offset_top = -165.99998
+offset_right = -63.0
+offset_bottom = 267.0
+scale = Vector2(0.2, 0.2)
+pivot_offset = Vector2(101, 216)
+texture_normal = ExtResource("17_5vbpv")
+stretch_mode = 3
+script = ExtResource("14_3bqt8")
+
+[node name="TextureButton3" type="TextureButton" parent="butonlar" unique_id=1885939515]
+offset_left = 58.999992
+offset_top = -170.0
+offset_right = 261.0
+offset_bottom = 260.0
+rotation = 1.6667894
+scale = Vector2(0.2, 0.2)
+pivot_offset = Vector2(101, 215)
+texture_normal = ExtResource("18_4y0vi")
+script = ExtResource("14_3bqt8")
+
+[node name="TextureButton4" type="TextureButton" parent="butonlar" unique_id=386286480]
+offset_left = 78.99999
+offset_top = -60.999992
+offset_right = 286.0
+offset_bottom = 382.0
+scale = Vector2(0.2, 0.2)
+pivot_offset = Vector2(104, 221)
+texture_normal = ExtResource("19_nugvb")
+script = ExtResource("14_3bqt8")
+
+[node name="TextureButton5" type="TextureButton" parent="butonlar" unique_id=1370352028]
+offset_left = -454.00003
+offset_top = -116.00002
+offset_right = -250.00003
+offset_bottom = 321.99997
+scale = Vector2(0.2, 0.2)
+pivot_offset = Vector2(102, 219)
+texture_normal = ExtResource("20_ncv0v")
+script = ExtResource("14_3bqt8")
+
+[node name="TextureButton6" type="TextureButton" parent="butonlar" unique_id=123317061]
+offset_left = -493.00006
+offset_top = -55.000023
+offset_right = -283.00006
+offset_bottom = 373.99997
+scale = Vector2(0.2, 0.2)
+pivot_offset = Vector2(105, 215)
+texture_normal = ExtResource("21_dipfd")
+script = ExtResource("14_3bqt8")
+
+[node name="TextureButton7" type="TextureButton" parent="butonlar" unique_id=414758766]
+offset_left = -430.00003
+offset_top = -46.000023
+offset_right = -228.00003
+offset_bottom = 391.99997
+scale = Vector2(0.2, 0.2)
+pivot_offset = Vector2(101, 219)
+texture_normal = ExtResource("9_vg6fj")
+script = ExtResource("14_3bqt8")
+
+[node name="TextureButton8" type="TextureButton" parent="butonlar" unique_id=351912576]
+offset_left = -276.00003
+offset_top = 144.99998
+offset_right = -139.00003
+offset_bottom = 215.99998
+scale = Vector2(0.4, 0.4)
+pivot_offset = Vector2(68, 35.5)
+texture_normal = ExtResource("10_pqk0f")
+stretch_mode = 0
+script = ExtResource("14_3bqt8")
+
+[node name="TextureButton9" type="TextureButton" parent="butonlar" unique_id=1228108100]
+offset_left = -17.00003
+offset_top = -134.99998
+offset_right = 184.99997
+offset_bottom = 303.0
+scale = Vector2(0.2, 0.2)
+pivot_offset = Vector2(101, 219)
+texture_normal = ExtResource("23_tj8kc")
+script = ExtResource("14_3bqt8")
+
+[node name="TextureButton10" type="TextureButton" parent="butonlar" unique_id=130190841]
+offset_left = -251.00002
+offset_top = -61.000023
+offset_right = -49.000015
+offset_bottom = 376.99997
+scale = Vector2(0.2, 0.2)
+pivot_offset = Vector2(101, 219)
+texture_normal = ExtResource("24_t5lso")
+script = ExtResource("14_3bqt8")
+
+[node name="TextureButton11" type="TextureButton" parent="butonlar" unique_id=1986422702]
+offset_left = 17.999939
+offset_top = -58.999992
+offset_right = 219.99994
+offset_bottom = 379.0
+scale = Vector2(0.2, 0.2)
+pivot_offset = Vector2(101, 219)
+texture_normal = ExtResource("25_swftf")
+script = ExtResource("14_3bqt8")
+
+[node name="TextureButton12" type="TextureButton" parent="butonlar" unique_id=709558007]
+offset_left = 110.99991
+offset_top = -165.99998
+offset_right = 312.9999
+offset_bottom = 272.0
+scale = Vector2(0.2, 0.2)
+pivot_offset = Vector2(101, 219)
+texture_normal = ExtResource("26_1vxpc")
+script = ExtResource("14_3bqt8")
+
+[node name="TextureButton13" type="TextureButton" parent="butonlar" unique_id=2083608117]
+offset_left = -61.00006
+offset_top = 4.000004
+offset_right = 146.99994
+offset_bottom = 442.0
+scale = Vector2(0.2, 0.2)
+pivot_offset = Vector2(101, 219)
+texture_normal = ExtResource("27_2swca")
+script = ExtResource("14_3bqt8")
+
+[node name="bitiş" type="Panel" parent="." unique_id=191144135]
+visible = false
+offset_left = 188.0
+offset_top = 44.0
+offset_right = 950.06494
+offset_bottom = 459.57513
+scale = Vector2(1.0431398, 1.0431398)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ei6qm")
+
+[node name="Yıldız" type="Sprite2D" parent="bitiş" unique_id=1497146463]
+position = Vector2(132, 187)
+rotation = -0.37292263
+scale = Vector2(0.048996165, 0.048996143)
+texture = ExtResource("28_duxbh")
+
+[node name="Kutlama" type="Sprite2D" parent="bitiş" unique_id=53105679]
+position = Vector2(636.243, 84.24487)
+rotation = 0.2284932
+scale = Vector2(0.30943996, 0.30943996)
+texture = ExtResource("29_wytel")
+
+[node name="Madalya" type="Sprite2D" parent="bitiş" unique_id=140510192]
+position = Vector2(90, 69.000046)
+scale = Vector2(0.26791808, 0.2679181)
+texture = ExtResource("30_o42si")
+
+[node name="geri" type="Button" parent="bitiş" unique_id=227880728]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 321.0
+offset_right = 176.4
+offset_bottom = 381.0
+theme = ExtResource("31_uhluh")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+text = "GERI"
+
+[node name="sonraki" type="Button" parent="bitiş" unique_id=1301047680]
+layout_mode = 0
+offset_left = 603.0
+offset_top = 318.0
+offset_right = 731.4
+offset_bottom = 378.0
+theme = ExtResource("31_uhluh")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+text = "SONRAKI"
+
+[node name="yazı" type="Label" parent="bitiş" unique_id=1184795285]
+layout_mode = 0
+offset_left = 197.0
+offset_top = 39.0
+offset_right = 601.0
+offset_bottom = 252.0
+theme_override_fonts/font = ExtResource("32_6y6ap")
+theme_override_font_sizes/font_size = 81
+text = "TEBRIKLER
+KAZANDINIZ"
+
+[connection signal="pressed" from="ateş" to="." method="_on_ateş_pressed"]
+[connection signal="pressed" from="butonlar/Sigara" to="." method="_on_sigara_pressed"]
+[connection signal="pressed" from="butonlar/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="butonlar/TextureButton2" to="." method="_on_texture_button_2_pressed"]
+[connection signal="pressed" from="butonlar/TextureButton3" to="." method="_on_texture_button_3_pressed"]
+[connection signal="pressed" from="butonlar/TextureButton4" to="." method="_on_texture_button_4_pressed"]
+[connection signal="pressed" from="butonlar/TextureButton5" to="." method="_on_texture_button_5_pressed"]
+[connection signal="pressed" from="butonlar/TextureButton6" to="." method="_on_texture_button_6_pressed"]
+[connection signal="pressed" from="butonlar/TextureButton7" to="." method="_on_texture_button_7_pressed"]
+[connection signal="pressed" from="butonlar/TextureButton8" to="." method="_on_texture_button_8_pressed"]
+[connection signal="pressed" from="butonlar/TextureButton9" to="." method="_on_texture_button_9_pressed"]
+[connection signal="pressed" from="butonlar/TextureButton10" to="." method="_on_texture_button_10_pressed"]
+[connection signal="pressed" from="butonlar/TextureButton11" to="." method="_on_texture_button_11_pressed"]
+[connection signal="pressed" from="butonlar/TextureButton12" to="." method="_on_texture_button_12_pressed"]
+[connection signal="pressed" from="butonlar/TextureButton13" to="." method="_on_texture_button_13_pressed"]
+[connection signal="pressed" from="bitiş/geri" to="." method="_on_geri_pressed"]
+[connection signal="pressed" from="bitiş/sonraki" to="." method="_on_sonraki_pressed"]
