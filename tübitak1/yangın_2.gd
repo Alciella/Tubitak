@@ -1,5 +1,6 @@
 extends Node2D
 var bölüm=0
+var son=false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,8 +14,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if bölüm==5:
+	if bölüm==5 and son==false:
+		son=true
 		$"bitiş".visible = true
+		$"bitiş_sesi".play()
 		pass 
 	pass
 	

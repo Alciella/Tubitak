@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://cgjy6row0vor" path="res://resimler/madalya.webp" id="10_4b2w7"]
 [ext_resource type="Theme" uid="uid://iukq480f3mjy" path="res://button.tres" id="11_rirrl"]
 [ext_resource type="FontFile" uid="uid://b28eqe7euiy5k" path="res://Chewy-Regular.ttf" id="12_0vs1u"]
+[ext_resource type="AudioStream" uid="uid://c0fm11stda878" path="res://ses/winsfx.mp3" id="13_8ycl4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aqp2j"]
 atlas = ExtResource("3_2lbw0")
@@ -340,6 +341,10 @@ theme_override_fonts/font = ExtResource("12_0vs1u")
 theme_override_font_sizes/font_size = 81
 text = "TEBRIKLER
 KAZANDINIZ"
+
+[node name="bitiş_sesi" type="AudioStreamPlayer2D" parent="." unique_id=871337054]
+stream = ExtResource("13_8ycl4")
+volume_db = -10.759
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="animation_finished" from="su" to="." method="_on_su_animation_finished"]

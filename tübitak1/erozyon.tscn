@@ -7,16 +7,34 @@
 [ext_resource type="Texture2D" uid="uid://dd4v18bxi1f1n" path="res://resimler/tumtarac.png" id="4_n6q6d"]
 [ext_resource type="Texture2D" uid="uid://olvq5tongsxu" path="res://resimler/kurek.png" id="5_e6h7f"]
 [ext_resource type="Texture2D" uid="uid://dx51qt2f07w7" path="res://resimler/kureksizusak.png" id="6_iauuk"]
-[ext_resource type="Script" uid="uid://8064qhp65r6f" path="res://texture_button.gd" id="6_n6q6d"]
+[ext_resource type="Script" path="res://texture_button.gd" id="6_n6q6d"]
 [ext_resource type="Texture2D" uid="uid://3447ufbirvph" path="res://resimler/resim-Photoroom.png" id="8_hnte6"]
-[ext_resource type="Script" uid="uid://dyop8fim3vc7h" path="res://ok.gd" id="9_3wsei"]
-[ext_resource type="Script" uid="uid://sil0kt5h8w7e" path="res://ok_2.gd" id="10_nrk57"]
+[ext_resource type="Script" path="res://ok.gd" id="9_3wsei"]
+[ext_resource type="Script" path="res://ok_2.gd" id="10_nrk57"]
+[ext_resource type="Texture2D" uid="uid://bpwldkai20ikv" path="res://resimler/yıldız.png" id="12_4re5t"]
+[ext_resource type="Texture2D" uid="uid://bfvyvo3pucg4h" path="res://resimler/kutlama.png" id="13_kfvbd"]
+[ext_resource type="Texture2D" uid="uid://cgjy6row0vor" path="res://resimler/madalya.webp" id="14_47tv5"]
+[ext_resource type="Theme" uid="uid://iukq480f3mjy" path="res://button.tres" id="15_3wj5h"]
+[ext_resource type="FontFile" uid="uid://b28eqe7euiy5k" path="res://Chewy-Regular.ttf" id="16_wydmn"]
+[ext_resource type="AudioStream" uid="uid://c0fm11stda878" path="res://ses/winsfx.mp3" id="17_kfvbd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2isja"]
 size = Vector2(465.5, 644)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3wsei"]
 size = Vector2(668, 633)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lm4qa"]
+bg_color = Color(0.10980392, 0.62352943, 0.84313726, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
 
 [node name="erozyon1" type="Node2D" unique_id=943021292]
 script = ExtResource("1_2isja")
@@ -40,23 +58,23 @@ scale = Vector2(0.4489098, 0.38685095)
 texture = ExtResource("4_n6q6d")
 
 [node name="TextureButton" type="TextureButton" parent="." unique_id=397965972]
-offset_left = -329.0001
-offset_top = -250.00003
-offset_right = 2071.0
-offset_bottom = 1351.0
+offset_left = -300.83527
+offset_top = -307.00003
+offset_right = 2211.8809
+offset_bottom = 1369.1909
 scale = Vector2(0.105, 0.105)
 pivot_offset = Vector2(1200, 800)
 texture_normal = ExtResource("5_e6h7f")
 script = ExtResource("6_n6q6d")
 
 [node name="Kureksizusak" type="Sprite2D" parent="." unique_id=1485444736]
-position = Vector2(1038, 544)
+position = Vector2(1037, 475)
 scale = Vector2(0.14, 0.14)
 texture = ExtResource("6_iauuk")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=738380105]
 visible = false
-position = Vector2(1036, 541)
+position = Vector2(1035.9999, 473)
 scale = Vector2(0.23889151, 0.23889156)
 texture = ExtResource("2_jlxft")
 
@@ -91,6 +109,77 @@ position = Vector2(258, 230)
 position = Vector2(73, 88.5)
 shape = SubResource("RectangleShape2D_3wsei")
 
+[node name="bitiş" type="Panel" parent="." unique_id=1369769590]
+visible = false
+offset_left = 188.0
+offset_top = 44.0
+offset_right = 950.06494
+offset_bottom = 459.57513
+scale = Vector2(1.0431398, 1.0431398)
+theme_override_styles/panel = SubResource("StyleBoxFlat_lm4qa")
+
+[node name="Yıldız" type="Sprite2D" parent="bitiş" unique_id=1318890296]
+position = Vector2(132, 187)
+rotation = -0.37292263
+scale = Vector2(0.048996165, 0.048996143)
+texture = ExtResource("12_4re5t")
+
+[node name="Kutlama" type="Sprite2D" parent="bitiş" unique_id=1608139590]
+position = Vector2(636.243, 84.24487)
+rotation = 0.2284932
+scale = Vector2(0.30943996, 0.30943996)
+texture = ExtResource("13_kfvbd")
+
+[node name="Madalya" type="Sprite2D" parent="bitiş" unique_id=1012041919]
+position = Vector2(90, 69.000046)
+scale = Vector2(0.26791808, 0.2679181)
+texture = ExtResource("14_47tv5")
+
+[node name="geri" type="Button" parent="bitiş" unique_id=598314529]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 321.0
+offset_right = 176.4
+offset_bottom = 381.0
+theme = ExtResource("15_3wj5h")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+text = "GERI"
+
+[node name="sonraki" type="Button" parent="bitiş" unique_id=597231661]
+layout_mode = 0
+offset_left = 603.0
+offset_top = 318.0
+offset_right = 731.4
+offset_bottom = 378.0
+theme = ExtResource("15_3wj5h")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+text = "SONRAKI"
+
+[node name="yazı" type="Label" parent="bitiş" unique_id=1300827321]
+layout_mode = 0
+offset_left = 197.0
+offset_top = 39.0
+offset_right = 601.0
+offset_bottom = 252.0
+theme_override_fonts/font = ExtResource("16_wydmn")
+theme_override_font_sizes/font_size = 81
+text = "TEBRIKLER
+KAZANDINIZ"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1056950721]
+stream = ExtResource("17_kfvbd")
+volume_db = -14.649
+
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="input_event" from="Area2D2" to="." method="_on_area_2d_2_input_event"]
+[connection signal="pressed" from="bitiş/geri" to="." method="_on_geri_pressed"]
+[connection signal="pressed" from="bitiş/sonraki" to="." method="_on_sonraki_pressed"]

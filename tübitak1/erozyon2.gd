@@ -1,4 +1,5 @@
 extends Node2D
+var son=false
 
 
 # Called when the node enters the scene tree for the first time.
@@ -52,6 +53,17 @@ func _on_area_2d_4_input_event(viewport: Node, event: InputEvent, shape_idx: int
 		
 		$Node2D4.visible=true
 		$Area2D4.visible=false
-		await get_tree().create_timer(5.0).timeout
-		#bitiş
+		await get_tree().create_timer(0.3).timeout
+		$"bitiş".visible=true
+		$AudioStreamPlayer2D.play()
+	pass # Replace with function body.
+
+
+func _on_sonraki_pressed() -> void:
+	get_tree().change_scene_to_file("res://bolumler_menu.tscn")
+	pass # Replace with function body.
+
+
+func _on_geri_pressed() -> void:
+	get_tree().change_scene_to_file("res://bolumler_menu.tscn")
 	pass # Replace with function body.

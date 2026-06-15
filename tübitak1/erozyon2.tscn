@@ -1,14 +1,20 @@
-[gd_scene format=3 uid="uid://dspjqw02il3t0"]
+[gd_scene format=3 uid="uid://c446x63drbk1l"]
 
 [ext_resource type="Script" uid="uid://dyk8lvo5nvw1b" path="res://erozyon2.gd" id="1_mu21s"]
 [ext_resource type="Texture2D" uid="uid://dd4v18bxi1f1n" path="res://resimler/tumtarac.png" id="2_uyqfh"]
 [ext_resource type="Texture2D" uid="uid://ikyipdwfw7wb" path="res://resimler/agac.png" id="3_p5gcw"]
 [ext_resource type="Texture2D" uid="uid://bgwsdbslxry5" path="res://resimler/erozyon_karakter.png" id="4_n7f7m"]
 [ext_resource type="Texture2D" uid="uid://3447ufbirvph" path="res://resimler/resim-Photoroom.png" id="5_8ltuu"]
-[ext_resource type="Script" uid="uid://dms227886ldus" path="res://resim_photoroom.gd" id="6_8ltuu"]
-[ext_resource type="Script" uid="uid://bq23yxmlhabda" path="res://resim_photoroom_2.gd" id="7_euxcb"]
-[ext_resource type="Script" uid="uid://c7thwb7h5yn0n" path="res://resim_photoroom_3.gd" id="8_0pdic"]
-[ext_resource type="Script" uid="uid://cj3p1s23660n0" path="res://resim_photoroom_4.gd" id="9_ra6pu"]
+[ext_resource type="Script" path="res://resim_photoroom.gd" id="6_8ltuu"]
+[ext_resource type="Script" path="res://resim_photoroom_2.gd" id="7_euxcb"]
+[ext_resource type="Script" path="res://resim_photoroom_3.gd" id="8_0pdic"]
+[ext_resource type="Script" path="res://resim_photoroom_4.gd" id="9_ra6pu"]
+[ext_resource type="Texture2D" uid="uid://bpwldkai20ikv" path="res://resimler/yıldız.png" id="10_4bj3o"]
+[ext_resource type="Texture2D" uid="uid://bfvyvo3pucg4h" path="res://resimler/kutlama.png" id="11_33yvf"]
+[ext_resource type="Texture2D" uid="uid://cgjy6row0vor" path="res://resimler/madalya.webp" id="12_iubdi"]
+[ext_resource type="Theme" uid="uid://iukq480f3mjy" path="res://button.tres" id="13_ql47n"]
+[ext_resource type="FontFile" uid="uid://b28eqe7euiy5k" path="res://Chewy-Regular.ttf" id="14_n2d44"]
+[ext_resource type="AudioStream" uid="uid://c0fm11stda878" path="res://ses/winsfx.mp3" id="15_33yvf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_euxcb"]
 size = Vector2(400, 88)
@@ -21,6 +27,18 @@ size = Vector2(729.75, 133)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5syaw"]
 size = Vector2(661, 301.5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bm6bh"]
+bg_color = Color(0.10980392, 0.62352943, 0.84313726, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
 
 [node name="Node2D" type="Node2D" unique_id=1301980049]
 script = ExtResource("1_mu21s")
@@ -70,8 +88,8 @@ scale = Vector2(0.23889151, 0.23889156)
 texture = ExtResource("4_n7f7m")
 
 [node name="ErozyonKarakter" type="Sprite2D" parent="." unique_id=204308770]
-position = Vector2(1041, 543)
-scale = Vector2(0.21, 0.21)
+position = Vector2(1037, 467.00003)
+scale = Vector2(0.23462887, 0.23462887)
 texture = ExtResource("4_n7f7m")
 
 [node name="Node2D2" type="Node2D" parent="." unique_id=481153121]
@@ -236,7 +254,78 @@ visible = false
 position = Vector2(394.5, 473.25)
 shape = SubResource("RectangleShape2D_5syaw")
 
+[node name="bitiş" type="Panel" parent="." unique_id=832611086]
+visible = false
+offset_left = 188.0
+offset_top = 44.0
+offset_right = 950.06494
+offset_bottom = 459.57513
+scale = Vector2(1.0431398, 1.0431398)
+theme_override_styles/panel = SubResource("StyleBoxFlat_bm6bh")
+
+[node name="Yıldız" type="Sprite2D" parent="bitiş" unique_id=555771397]
+position = Vector2(132, 187)
+rotation = -0.37292263
+scale = Vector2(0.048996165, 0.048996143)
+texture = ExtResource("10_4bj3o")
+
+[node name="Kutlama" type="Sprite2D" parent="bitiş" unique_id=1570664236]
+position = Vector2(636.243, 84.24487)
+rotation = 0.2284932
+scale = Vector2(0.30943996, 0.30943996)
+texture = ExtResource("11_33yvf")
+
+[node name="Madalya" type="Sprite2D" parent="bitiş" unique_id=1385999602]
+position = Vector2(90, 69.000046)
+scale = Vector2(0.26791808, 0.2679181)
+texture = ExtResource("12_iubdi")
+
+[node name="geri" type="Button" parent="bitiş" unique_id=1589985160]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 321.0
+offset_right = 176.4
+offset_bottom = 381.0
+theme = ExtResource("13_ql47n")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+text = "GERI"
+
+[node name="sonraki" type="Button" parent="bitiş" unique_id=1492272062]
+layout_mode = 0
+offset_left = 603.0
+offset_top = 318.0
+offset_right = 731.4
+offset_bottom = 378.0
+theme = ExtResource("13_ql47n")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+text = "SONRAKI"
+
+[node name="yazı" type="Label" parent="bitiş" unique_id=1646391537]
+layout_mode = 0
+offset_left = 197.0
+offset_top = 39.0
+offset_right = 601.0
+offset_bottom = 252.0
+theme_override_fonts/font = ExtResource("14_n2d44")
+theme_override_font_sizes/font_size = 81
+text = "TEBRIKLER
+KAZANDINIZ"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1268936805]
+stream = ExtResource("15_33yvf")
+volume_db = -15.241
+
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="input_event" from="Area2D2" to="." method="_on_area_2d_2_input_event"]
 [connection signal="input_event" from="Area2D3" to="." method="_on_area_2d_3_input_event"]
 [connection signal="input_event" from="Area2D4" to="." method="_on_area_2d_4_input_event"]
+[connection signal="pressed" from="bitiş/geri" to="." method="_on_geri_pressed"]
+[connection signal="pressed" from="bitiş/sonraki" to="." method="_on_sonraki_pressed"]

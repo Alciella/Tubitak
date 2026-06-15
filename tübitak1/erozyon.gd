@@ -38,7 +38,17 @@ func _on_area_2d_2_input_event(viewport: Node, event: InputEvent, shape_idx: int
 		$Tumtarac.visible=true
 		$Area2D2.visible=false
 		$ok2.visible=false
-		await get_tree().create_timer(5.0).timeout
-		
-		#bitis
+		await get_tree().create_timer(0.3).timeout
+		$"bitiş".visible=true
+		$AudioStreamPlayer2D.play()
+	pass # Replace with function body.
+
+
+func _on_geri_pressed() -> void:
+	get_tree().change_scene_to_file("res://bolumler_menu.tscn")
+	pass # Replace with function body.
+
+
+func _on_sonraki_pressed() -> void:
+	get_tree().change_scene_to_file("res://erozyon2.tscn")
 	pass # Replace with function body.
